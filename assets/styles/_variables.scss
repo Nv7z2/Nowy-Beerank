@@ -1,0 +1,27 @@
+// Fonts
+$font-small: 14px;
+$font-base: 20px;
+$font-medium: 24px;
+$font-large: 32px;
+$font-xlarge: 40px;
+$font-xxlarge: 64px;
+$font-huge: 128px;
+
+// Media query breakpoints
+$breakpoint-xs: 400px;
+$breakpoint-sm: 600px;
+$breakpoint-md: 900px;
+$breakpoint-lg: 1200px;
+$breakpoint-xl: 1400px;
+
+// Font family
+$font-family: Inter, sans-serif;
+
+// Colors
+$color-white: #FFFFFF;
+$color-black: #0D0D0D;
+$gray-color: #D7D7D7;
+$background-color: #F2F2F2;
+$text-color: $color-black;
+$text-color-white: $color-white;
+$primary-color: #F6A319;
