@@ -1,11 +1,8 @@
 <script setup lang="ts">
 const route = useRoute()
-console.log("Current route:", route.path);
 const { data: page } = await useAsyncData(route.path, () =>
   queryCollection("pages").path('/pages').first() // Adjust the path to match your content structure
 );
-
-console.log("Page data:", page);
 
 const metaTitle = computed(() => page?.value?.seo.title);
 const metaDesc = computed(() => page?.value?.seo.description);

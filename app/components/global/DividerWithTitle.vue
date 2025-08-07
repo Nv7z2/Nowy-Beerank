@@ -3,7 +3,7 @@
 <template>
   <div class="divider-with-title">
     <p class="divider-text">
-      <slot></slot>
+      <slot mdc-unwrap="p"></slot>
     </p>
 
     <div class="divider-line"></div>
@@ -17,10 +17,12 @@
   display: flex;
   gap: 1rem;
   align-items: center;
+  padding: 6.25rem $desktop-section-padding;
 
   .divider-text {
-    font-size: 1rem;
+    font-size: $font-base;
     white-space: nowrap;
+    margin: 0;
   }
 
   .divider-line {

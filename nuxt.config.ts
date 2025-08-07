@@ -17,7 +17,9 @@ export default defineNuxtConfig({
   alias: {
     // Alias do folderu komponentów w app/
     '@components':  resolve(__dirname, 'app/components'),
-    '@styles':      resolve(__dirname, 'assets/styles')
+    '@styles':      resolve(__dirname, 'assets/styles'),
+    '@images':      resolve(__dirname, 'assets/images'),
+    '@icons':       resolve(__dirname, 'assets/icons'),
   },
   css: [
     '@styles/main.scss'

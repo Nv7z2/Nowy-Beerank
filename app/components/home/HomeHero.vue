@@ -1,8 +1,94 @@
 <script></script>
 
 <template>
-    <div class="home-header">
+  <section class="home-hero">
+    <img
+      src="@images/BEERANK.svg"
+      role="presentation"
+      class="home-hero__logo"
+    />
+
+    <div class="home-hero__bottom">
+      <div class="home-hero__description-wrapper">
         <slot name="description"></slot>
-        <slot name="thumbnail"></slot>
+      </div>
+      <div class="home-hero__bottom-right">
+          <slot name="thumbnail" mdc-unwrap="p"></slot>
+          <slot name="social-links"></slot>
+      </div>
     </div>
+  </section>
 </template>
+
+<style lang="scss">
+@use "@styles/variables" as *;
+
+.home-hero {
+  display: flex;
+  margin: 3rem 0;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 $desktop-section-padding;
+
+  &__logo {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__bottom {
+    display: flex;
+    width: 100%;
+    margin-top: 9rem;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__description-wrapper {
+    max-width: 38rem;
+    
+    & > p {
+        margin: 0;
+        text-align: left;
+        font-size: $font-large;
+    }
+  }
+
+    &__bottom-right {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 2rem;
+
+        & * {
+            margin: 0;
+        }
+
+        & img {
+            max-width: 20rem;
+        }
+
+        & ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        & li {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+        
+        & li > a {
+            text-decoration: none;
+            font-weight: 500;
+            color: $text-color;
+
+            &:hover {
+                color: $primary-color;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+</style>
