@@ -1,0 +1,16 @@
+{
+    "seo": [
+        {
+            "name": "Mapowanie serwisu",
+            "price": 500
+        },
+        {
+            "name": "Wdrożenie poprawek przed migracją",
+            "price": 1000
+        },
+        {
+            "name": "Migracja",
+            "price": 2000
+        }
+    ]
+}

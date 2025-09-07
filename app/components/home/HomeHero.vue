@@ -13,8 +13,8 @@
         <slot name="description"></slot>
       </div>
       <div class="home-hero__bottom-right">
-          <slot name="thumbnail" mdc-unwrap="p"></slot>
-          <slot name="social-links"></slot>
+        <slot name="thumbnail" mdc-unwrap="p"></slot>
+        <slot name="social-links"></slot>
       </div>
     </div>
   </section>
@@ -22,14 +22,21 @@
 
 <style lang="scss">
 @use "@styles/variables" as *;
+@use "@styles/mixins" as *;
 
 .home-hero {
   display: flex;
-  margin: 3rem 0;
+  margin: 1rem 0 3rem;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 0 $desktop-section-padding;
+
+  @include on-mobile {
+    flex-direction: column;
+    margin-top: 1.5rem;
+    padding: 0 $mobile-section-padding;
+  }
 
   &__logo {
     max-width: 100%;
@@ -42,53 +49,74 @@
     margin-top: 9rem;
     justify-content: space-between;
     align-items: flex-end;
+
+    @include on-mobile {
+      flex-direction: column;
+      gap: 2.5rem;
+      margin-top: 5rem;
+    }
   }
 
   &__description-wrapper {
     max-width: 38rem;
-    
+
     & > p {
-        margin: 0;
-        text-align: left;
-        font-size: $font-large;
+      margin: 0;
+      text-align: left;
+      font-size: $font-large;
+
+      @include on-mobile {
+        font-size: $font-large-mobile;
+      }
     }
   }
 
-    &__bottom-right {
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        gap: 2rem;
+  &__bottom-right {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 2rem;
 
-        & * {
-            margin: 0;
-        }
-
-        & img {
-            max-width: 20rem;
-        }
-
-        & ul {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-        }
-
-        & li {
-            display: inline-block;
-            margin-right: 1rem;
-        }
-        
-        & li > a {
-            text-decoration: none;
-            font-weight: 500;
-            color: $text-color;
-
-            &:hover {
-                color: $primary-color;
-                text-decoration: underline;
-            }
-        }
+    @include on-mobile {
+      width: 100%;
+      align-items: start;
     }
+
+    & * {
+      margin: 0;
+    }
+
+    & img {
+      max-width: 20rem;
+      width: 100%;
+
+      @include on-mobile {
+        width: 100%;
+        max-width: unset;
+      }
+    }
+
+    & ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    & li {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+
+    & li > a {
+      text-decoration: none;
+      font-weight: 500;
+      color: $text-color;
+
+      &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+      }
+    }
+  }
 }
 </style>

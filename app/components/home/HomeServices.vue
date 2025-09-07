@@ -13,13 +13,25 @@
 
 <style lang="scss">
 @use "@styles/variables" as *;
+@use "@styles/mixins" as *;
 
 .home-services {
     padding: 1.75rem $desktop-section-padding 6.25rem;
+    margin-top: 7rem;
+
+    @include on-mobile {
+        margin-top: 4rem;
+        padding: 2.5rem $mobile-section-padding 2.5rem;
+    }
 
     &__top {
         display: flex;
         justify-content: space-between;
+
+        @include on-mobile {
+            flex-direction: column;
+            gap: 5rem;
+        }
 
         & > p {
             font-size: $font-base;
@@ -28,6 +40,10 @@
             max-width: 48rem;
             line-height: 1.2;
             letter-spacing: -.5px;
+
+            @include on-mobile {
+                font-size: $font-base-mobile;
+            }
         }
     }
 
@@ -36,6 +52,10 @@
         font-weight: 600;
         font-size: $font-xxlarge;
         flex: 1;
+
+        @include on-mobile {
+            font-size: $font-xxlarge-mobile;
+        }
     }
 }
 </style>
