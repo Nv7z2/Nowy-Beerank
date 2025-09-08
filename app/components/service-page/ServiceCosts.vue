@@ -6,6 +6,10 @@ const props = defineProps({
     type: Object,
     validator: (val) => val.label && val.id,
   },
+  serviceType: {
+    type: String,
+    default: "seo",
+  },
 });
 </script>
 
@@ -18,7 +22,7 @@ const props = defineProps({
     <div class="service-costs__boxes">
       <div
         class="service-costs__box"
-        v-for="price in pricing.seo"
+        v-for="price in pricing[serviceType]"
         :key="price.name"
       >
         <h3 class="service-costs__service-name">{{ price.name }}</h3>
