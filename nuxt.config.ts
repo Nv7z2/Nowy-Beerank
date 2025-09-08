@@ -27,6 +27,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "pl",
       },
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }]
     },
     pageTransition: { name: "page", mode: "out-in" },
   },
@@ -75,5 +76,8 @@ export default defineNuxtConfig({
     build: {
       cssCodeSplit: false,
     },
+  },
+  content: {
+    experimental: { nativeSqlite: true },
   },
 });
