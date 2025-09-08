@@ -1,7 +1,7 @@
 ---
-title: Pozycjonowanie SEO w Beerank - Postaw na długoterminowe zyski
-description: Zmień to! Poznaj BeeRank psz czołową agencje SEO w Polsce. Która działa w synergii z biznesem. Pozwól działać marketingowym pszczołom. Zapylimy Twój biznes
-date: 2025/02/12
+title: Analytka strony www w Beerank - Google Analytics i Microsoft Clarity
+description: Pomożemy Ci wdrożyć i interpretować ruch na stronie internetowej Twojej firmy. Wdrożymy narzędzia Google, Meta i Microsoft Clarity.
+date: 2025/09/08
 schemaType: Service
 ---
 
