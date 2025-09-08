@@ -68,7 +68,7 @@ heading: {
 ---
 serviceType: 'analityka'
 heading: {
-  label: 'Koszty wdrożenia i audytu Analityki',
+  label: 'Ile kosztuje wdrożenie i audyt Analityki',
   id: 'cennik',
   tocLabel: 'Ile to kosztuje?'
 }
