@@ -108,6 +108,7 @@ onBeforeUnmount(() => {
 </template>
 
 <style lang="scss">
+@use "sass:color";
 @use "@styles/variables" as *;
 @use "@styles/mixins" as *;
 
@@ -173,7 +174,7 @@ onBeforeUnmount(() => {
         text-transform: uppercase;
         padding: 0.625rem 1rem;
         border-radius: 2rem;
-        background-color: rgba(#0d0d0d, 0.1);
+        background-color: rgba(#0d0d0d, 0.075);
         display: inline-block;
         font-weight: bold;
         letter-spacing: .5px;
@@ -184,7 +185,7 @@ onBeforeUnmount(() => {
 
         &:hover {
           color: $text-color-white;
-          background-color: $primary-color;
+          background-color: color.adjust($primary-color, $lightness: -10%);
         }
       }
     }
@@ -262,7 +263,7 @@ onBeforeUnmount(() => {
 
   &__step-link--active {
     color: $text-color-white !important;
-    background-color: $primary-color !important;
+    background-color: color.adjust($primary-color, $lightness: -10%) !important;
   }
 }
 </style>
