@@ -4,8 +4,6 @@ const { data: page } = await useAsyncData(route.path, () =>
   queryCollection("pages").path('/pages/oferta').first() // Adjust the path to match your content structure
 );
 
-console.log(page.value)
-
 const metaTitle = computed(() => page?.value?.seo.title);
 const metaDesc = computed(() => page?.value?.seo.description);
 
