@@ -106,10 +106,6 @@ Beerank to grupa zapaleńców SEO, którzy lubią to, co robią i robimy to psz�
 ::
 
 ::divider-with-title
-Co mówią klienci
-::
-
-::divider-with-title
 Sprawdź naszą bazę wiedzy
 ::
 
