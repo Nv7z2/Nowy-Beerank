@@ -49,7 +49,6 @@ function closeMobileMenu() {
       @click="openMobileMenu"
       aria-label="Otwórz menu"
       title="Otwórz menu"
-      role="menubutton"
     >
       <img
         src="@images/icons/hamburger-icon.svg"
