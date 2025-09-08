@@ -37,8 +37,6 @@ W tej sekcji można zarządzać użytkownikami, sprawdzać uprawnienia oraz mody
 
 ![2 google tag manager - administracja](https://cdn.beerank.pl/blog/google-tag-manager-dodawanie-uzytkownika/2-google-tag-manager-administracja.avif)
 
-Przejście do panelu „Administracja”
-
 ## Zarządzanie użytkownikami
 
 ![3 google tag manager - zarządzanie użytkownikami](https://cdn.beerank.pl/blog/google-tag-manager-dodawanie-uzytkownika/3-google-tag-manager-zarzadzanie-uzytkownikami.avif)
@@ -51,11 +49,7 @@ Następnie na stronie ekranu pojawi się nowy panel, w którym będziesz mógł 
 
 ![4 google tag manager - dodawanie użytkownika](https://cdn.beerank.pl/blog/google-tag-manager-dodawanie-uzytkownika/4-google-tag-manager-dodawanie-uzytkownika.avif)
 
-Przejście do menu dodania nowego użytkownika.
-
 ![5 google tag manager - dodawanie użytkownika 2](https://cdn.beerank.pl/blog/google-tag-manager-dodawanie-uzytkownika/5-google-tag-manager-dodawanie-uzytkownika-2.avif)
-
-Wybór dodania nowego użytkownika.
 
 ## Podawanie adresu e-mail i wybór uprawnień
 
@@ -67,19 +61,11 @@ Dalej, najważniejszym krokiem jest wybór uprawnień dotyczących konkretnego k
 
 ![6 google tag manager - mail nowego użytkownika](https://cdn.beerank.pl/blog/google-tag-manager-dodawanie-uzytkownika/6-google-tag-manager-mail-nowego-uzytkownika.avif)
 
-Podawanie adresu e-mail nowego użytkownika.
-
 ![7 google tag manager - wybór uprawnień](https://cdn.beerank.pl/blog/google-tag-manager-dodawanie-uzytkownika/7-google-tag-manager-wybor-uprawnien.avif)
-
-Wybór uprawnień dotyczących konta.
 
 ![8 google tag manager - wybór dostępów](https://cdn.beerank.pl/blog/google-tag-manager-dodawanie-uzytkownika/8-google-tag-manager-wybor-dostepow.avif)
 
-Wybór uprawnień dotyczących kontenera
-
 ![9 google tag manager - uprawnienia kontenerów](https://cdn.beerank.pl/blog/google-tag-manager-dodawanie-uzytkownika/9-google-tag-manager-uprawnienia-kontenerow.avif)
-
-Wybór uprawnień do publikacji dla wybranego kontenera.
 
 ## Zatwierdzanie zmian
 
@@ -87,8 +73,4 @@ Ostatnim etapem jest zatwierdzanie zmian przez kliknięcie przycisku „Zaproś�
 
 ![10 google tag manager - zapisanie zaproszenia](https://cdn.beerank.pl/blog/google-tag-manager-dodawanie-uzytkownika/10-google-tag-manager-zapisanie-zaproszenia.avif)
 
-Zatwierdzanie zmian i zaproszenie nowego użytkownika.
-
 ![google tag manager - mail z potwierdzeniem](https://cdn.beerank.pl/blog/google-tag-manager-dodawanie-uzytkownika/google-tag-manager-mail-z-potwierdzeniem.avif)
-
-Powiadomienie o zaproszeniu do nowego konta Google Tag Manager.
