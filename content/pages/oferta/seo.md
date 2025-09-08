@@ -77,6 +77,7 @@ Wiedza, trendy, skuteczne strategie
 
 ::service-page-service-costs
 ---
+serviceType: 'seo'
 heading: {
   label: 'Koszty obsługi z zakresu SEO',
   id: 'cennik',
