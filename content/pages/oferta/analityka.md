@@ -68,7 +68,7 @@ heading: {
 ---
 serviceType: 'analityka'
 heading: {
-  label: 'Koszty obsługi z zakresu SEO',
+  label: 'Koszty wdrożenia i audytu Analityki',
   id: 'cennik',
   tocLabel: 'Ile to kosztuje?'
 }
