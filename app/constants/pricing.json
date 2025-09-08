@@ -40,5 +40,19 @@
             "name": "Reklamy w Google + Meta (Facebook i Instagram)",
             "price": 2000
         }
+    ],
+    "sxo": [
+        {
+            "name": "Audyt ścieżki zakupowej",
+            "price": 700
+        },
+        {
+            "name": "Audyt + wdrożenie zmian",
+            "price": 1500
+        },
+        {
+            "name": "Audyt + wdrożenie zmian + stała opieka SXO",
+            "price": 2000
+        }
     ]
 }
