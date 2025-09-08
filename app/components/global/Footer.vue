@@ -33,7 +33,7 @@
     </div>
 
     <div class="footer__image-wrapper">
-      <img src="@images/BEERANK.svg" alt="Beerank logo" class="footer__image" />
+      <img src="@images/BEERANK.svg" alt="Beerank logo" class="footer__image" loading="lazy" />
     </div>
   </footer>
 </template>
