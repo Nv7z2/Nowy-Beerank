@@ -22,6 +22,10 @@ export default defineNuxtConfig({
     "@icons": resolve(__dirname, "assets/icons"),
   },
   css: ["@styles/main.scss"],
+  image: {
+    provider: "ipx",
+    domains: ["cdn.beerank.pl"],
+  },
   app: {
     head: {
       htmlAttrs: {
