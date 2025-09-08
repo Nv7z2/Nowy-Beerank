@@ -21,7 +21,7 @@
       <div class="footer__social-media">
         <a href="https://facebook.com/beerank.seo" class="footer__social-link" target="_blank">Facebook</a>
         <a href="https://www.instagram.com/beerank.seo" class="footer__social-link" target="_blank">Instagram</a>
-        <a href="https://www.linkedin.com/company/beeran" class="footer__social-link" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/company/beerank" class="footer__social-link" target="_blank">LinkedIn</a>
       </div>
     </div>
 
