@@ -2,6 +2,20 @@
 import Breadcrumbs from "~/components/global/Breadcrumbs.vue";
 import DividerWithTitle from "~/components/global/DividerWithTitle.vue";
 import RecentBlogPosts from "~/components/global/RecentBlogPosts.vue";
+import { h } from 'vue'
+import { NuxtImg } from '#components'
+
+const components = {
+  img(props) {
+    // Jeśli obraz w CDN - zwróć zwykły <img> lub NuxtImg z providerem static
+    if (props.src.startsWith('https://cdn.beerank.pl')) {
+      return h('img', props) // lub jeśli chcesz NuxtImg bez proxy - konfiguruj to osobno
+    }
+
+    // Dla reszty ładowanie standardowe NuxtImg (z domyślnym providerem)
+    return h(NuxtImg, props)
+  }
+}
 
 const route = useRoute();
 const { data: page } = await useAsyncData(
