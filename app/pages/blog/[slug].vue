@@ -3,6 +3,12 @@ import Breadcrumbs from "~/components/global/Breadcrumbs.vue";
 import DividerWithTitle from "~/components/global/DividerWithTitle.vue";
 import RecentBlogPosts from "~/components/global/RecentBlogPosts.vue";
 
+import { NuxtImg } from "#components";
+
+const components = {
+  img: NuxtImg,
+};
+
 const route = useRoute();
 const { data: page } = await useAsyncData(
   route.path,
@@ -23,11 +29,11 @@ useSeoMeta({
   description: metaDesc,
   ogDescription: metaDesc,
   twitterDescription: metaDesc,
+  ogUrl: `https://beerank.pl${route.path}`,
+  ogType: "article",
   twitterCard: "summary_large_image",
   author: "Kacper Baran",
 });
-
-console.log(page?.value?.body.toc?.links);
 </script>
 
 <template>
@@ -40,7 +46,7 @@ console.log(page?.value?.body.toc?.links);
       <h1 class="blog-post__h1">{{ page?.meta.heading }}</h1>
       <div class="blog-post__tags">
         <span class="blog-post__tag" v-for="tag in page?.meta.tags">
-          {{ tag.replaceAll('-', ' ') }}
+          {{ tag.replaceAll("-", " ") }}
         </span>
       </div>
       <p
@@ -84,6 +90,7 @@ console.log(page?.value?.body.toc?.links);
           v-if="page"
           :value="page"
           style="scroll-margin-top: 8rem"
+          :components="components"
         />
       </div>
     </article>
@@ -127,7 +134,7 @@ console.log(page?.value?.body.toc?.links);
   &__tags {
     margin: 2.5rem 0 4rem;
     display: flex;
-    gap: .25rem;
+    gap: 0.25rem;
 
     @include on-mobile {
       margin: 2rem 0;
@@ -236,16 +243,16 @@ console.log(page?.value?.body.toc?.links);
       display: inline-flex;
       width: 100%;
       gap: 1rem;
-      border-bottom: 1px solid rgba($text-color, .25);
-      transition: transform .1s ease;
+      border-bottom: 1px solid rgba($text-color, 0.25);
+      transition: transform 0.1s ease;
 
       &:hover {
         transform: translateX(2rem);
       }
 
       @include on-mobile {
-        padding: .5rem 0;
-        gap: .5rem;
+        padding: 0.5rem 0;
+        gap: 0.5rem;
 
         &:hover {
           transform: unset;
@@ -325,6 +332,13 @@ console.log(page?.value?.body.toc?.links);
       &:hover {
         background-color: initial;
       }
+    }
+
+    p img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 3rem;
     }
   }
 }
