@@ -26,5 +26,19 @@
             "name": "Zaprojektowanie analityki i zdarzeń (all-in-one)",
             "price": 2500
         }
+    ],
+    "reklama": [
+        {
+            "name": "Reklamy w Google",
+            "price": 1000
+        },
+        {
+            "name": "Reklamy w Meta (Facebook i Instagram)",
+            "price": 1200
+        },
+        {
+            "name": "Reklamy w Google + Meta (Facebook i Instagram)",
+            "price": 2000
+        }
     ]
 }
