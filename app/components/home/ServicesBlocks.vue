@@ -47,10 +47,10 @@ const serviceBlocks = [
     link: "/oferta/reklama",
   },
   {
-    name: "UX/UI Design",
+    name: "Optymalizacja SXO",
     icon: "/icons/service-4.svg",
     description: "Dostarczamy rozwiązania z zakresu SXO dla biznesu.",
-    link: "/oferta/ux-ui",
+    link: "/oferta/sxo",
   },
 ];
 </script>
