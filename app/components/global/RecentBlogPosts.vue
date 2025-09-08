@@ -20,7 +20,7 @@ const { data: posts } = await useAsyncData("blog", () => {
                 v-for="tag in post.meta.tags"
                 :key="tag"
               >
-                {{ tag }}
+                {{ tag.replaceAll("-", " ") }}
               </small>
             </div>
             <span class="recent-posts__title">{{
