@@ -79,7 +79,7 @@ Wiedza, trendy, skuteczne strategie
 ---
 serviceType: 'seo'
 heading: {
-  label: 'Koszty obsługi z zakresu SEO',
+  label: 'Ile kosztuje SEO z Beerank',
   id: 'cennik',
   tocLabel: 'Ile to kosztuje?'
 }
