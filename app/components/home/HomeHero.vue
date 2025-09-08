@@ -1,4 +1,6 @@
-<script></script>
+<script>
+import { NuxtImg } from "#components";
+</script>
 
 <template>
   <section class="home-hero">
@@ -6,6 +8,8 @@
       src="@images/BEERANK.svg"
       role="presentation"
       class="home-hero__logo"
+      loading="eager"
+      fetchpriority="high"
     />
 
     <div class="home-hero__bottom">
@@ -16,7 +20,12 @@
         <slot name="description"></slot>
       </div>
       <div class="home-hero__bottom-right">
-        <slot name="thumbnail" mdc-unwrap="p"></slot>
+        <img
+          src="@images/miniaturka_hero_beerank.avif"
+          alt="Beerank miniaturka pszczoła"
+          loading="eager"
+          fetchpriority="high"
+        />
         <slot name="social-links"></slot>
       </div>
     </div>
@@ -45,7 +54,7 @@
     font-size: $font-medium;
     margin: 0 0 2rem;
     font-weight: normal;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     text-align: left;
 
     @include on-mobile {
