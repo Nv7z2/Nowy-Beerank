@@ -21,7 +21,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <section class="slider-section">
+  <section class="slider-section" loading="eager" fetchpriority="high">
     <div class="slider-section__texts">
       <span class="slider-section__main-text">{{ props.sliderMainText }}</span>
       <ul>
