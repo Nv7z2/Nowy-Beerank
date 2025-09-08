@@ -8,7 +8,7 @@ const formData = ref({
 </script>
 
 <template>
-  <section class="contact">
+  <section class="contact" id="kontakt">
     <h2 class="contact__heading">Bee:In Touch 🐝</h2>
     <form class="contact__form">
       <div class="contact__form-group">
@@ -44,7 +44,7 @@ const formData = ref({
                 !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email),
             }"
           >
-            Twój adres e-mail
+            Twój adres e-mail *
           </span>
           <input
             type="email"
