@@ -1,5 +1,5 @@
 <script setup>
-import ContactButton from '../global/ContactButton.vue';
+import ContactButton from "../global/ContactButton.vue";
 
 const navigation = ref("navigation");
 let isMobileMenuOpen = ref(false);
@@ -18,42 +18,60 @@ function closeMobileMenu() {
 <template>
   <header class="header">
     <div class="header__logo">
-      <NuxtLink to="/"><img src="@images/beerank-sygnet.svg" alt="Logo" role="presentation" /></NuxtLink>
+      <NuxtLink to="/" aria-label="Logo Beerank - Przejdź do strony głównej">
+        <img
+          src="@images/beerank-sygnet.svg"
+          alt="Logo"
+          role="presentation"
+          aria-hidden="true"
+        />
+      </NuxtLink>
     </div>
     <nav class="header__nav">
       <ul class="header__nav-list" ref="navigation">
         <li><NuxtLink to="/oferta" class="header__link">Usługi</NuxtLink></li>
-        <li><NuxtLink to="/case-studies" class="header__link">Jak to robimy</NuxtLink></li>
-        <li><NuxtLink to="/blog" class="header__link">Baza wiedzy</NuxtLink></li>
+        <li>
+          <NuxtLink to="/case-studies" class="header__link">
+            Jak to robimy
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/blog" class="header__link">Baza wiedzy</NuxtLink>
+        </li>
         <li>
           <contact-button />
         </li>
       </ul>
     </nav>
 
-    <button class="header__hamburger-button" @click="openMobileMenu">
+    <button
+      class="header__hamburger-button"
+      @click="openMobileMenu"
+      aria-label="Otwórz menu"
+      title="Otwórz menu"
+      role="menubutton"
+    >
       <img
         src="@images/icons/hamburger-icon.svg"
         role="presentation"
         alt="Menu"
+        aria-hidden="true"
       />
     </button>
-
-    
   </header>
 
   <button
-      class="header__close-mobile-menu-button"
-      v-if="isMobileMenuOpen"
-      @click="closeMobileMenu"
-    >
-      <img
-        src="@images/icons/mobile-menu-close-icon.svg"
-        role="presentation"
-        alt="Zamknij menu"
-        @click="navigation.classList.remove('header__nav-list--active')"
-      />
-    </button>
+    class="header__close-mobile-menu-button"
+    v-if="isMobileMenuOpen"
+    @click="closeMobileMenu"
+  >
+    <img
+      src="@images/icons/mobile-menu-close-icon.svg"
+      role="presentation"
+      alt="Zamknij menu"
+      @click="navigation.classList.remove('header__nav-list--active')"
+    />
+  </button>
 </template>
 
 <style scoped lang="scss">
@@ -68,7 +86,7 @@ function closeMobileMenu() {
   align-items: center;
   position: sticky;
   top: 0;
-  background-color: rgba($background-color, .85);
+  background-color: rgba($background-color, 0.85);
   z-index: 100;
   // transition: padding .1s ease;
 

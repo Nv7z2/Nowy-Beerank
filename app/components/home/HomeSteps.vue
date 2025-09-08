@@ -37,8 +37,9 @@ onBeforeUnmount(() => {
               'home-steps__step-link--active':
                 currentHash == '#analiza' || !currentHash,
             }"
-            ><span>WSTĘPNA ANALIZA</span></a
           >
+            <span>WSTĘPNA ANALIZA</span>
+          </a>
         </li>
         <li>
           <a
@@ -46,8 +47,9 @@ onBeforeUnmount(() => {
             :class="{
               'home-steps__step-link--active': currentHash == '#oferta',
             }"
-            ><span>Przygotowanie OFERTY</span></a
           >
+            <span>Przygotowanie OFERTY</span>
+          </a>
         </li>
         <li>
           <a
@@ -55,8 +57,9 @@ onBeforeUnmount(() => {
             :class="{
               'home-steps__step-link--active': currentHash == '#umowa',
             }"
-            ><span>SZCZEGÓŁY UMOWNE</span></a
           >
+            <span>SZCZEGÓŁY UMOWNE</span>
+          </a>
         </li>
       </ul>
     </nav>
@@ -173,6 +176,7 @@ onBeforeUnmount(() => {
         background-color: rgba(#0d0d0d, 0.1);
         display: inline-block;
         font-weight: bold;
+        letter-spacing: .5px;
 
         @include on-mobile {
           font-size: $font-small-mobile;
