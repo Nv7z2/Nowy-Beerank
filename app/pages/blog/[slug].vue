@@ -1,23 +1,7 @@
 <script setup lang="ts">
-import { h } from 'vue'
 import Breadcrumbs from "~/components/global/Breadcrumbs.vue";
 import DividerWithTitle from "~/components/global/DividerWithTitle.vue";
 import RecentBlogPosts from "~/components/global/RecentBlogPosts.vue";
-
-import { NuxtImg } from "#components";
-
-const components = {
-  img(props) {
-    // Weź alt z props lub pusty string
-    const alt = props.alt || ''
-
-    return h(NuxtImg, {
-      ...props,
-      alt,
-      title: alt // zawsze przekazuj title
-    })
-  }
-}
 
 const route = useRoute();
 const { data: page } = await useAsyncData(
@@ -100,7 +84,6 @@ useSeoMeta({
           v-if="page"
           :value="page"
           style="scroll-margin-top: 8rem"
-          :components="components"
         />
       </div>
     </article>
