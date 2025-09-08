@@ -29,7 +29,7 @@ function closeMobileMenu() {
     </div>
     <nav class="header__nav">
       <ul class="header__nav-list" ref="navigation">
-        <li><NuxtLink to="/oferta" class="header__link">Usługi</NuxtLink></li>
+        <li><NuxtLink to="/oferta" class="header__link">Oferta</NuxtLink></li>
         <li>
           <NuxtLink to="/case-studies" class="header__link">
             Jak to robimy
