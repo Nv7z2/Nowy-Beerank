@@ -12,5 +12,19 @@
             "name": "Migracja",
             "price": 2000
         }
+    ],
+    "analityka": [
+        {
+            "name": "Audyt analityki",
+            "price": 500
+        },
+        {
+            "name": "Audyt SEO + analiza ścieżki zakupowej",
+            "price": 1200
+        },
+        {
+            "name": "Zaprojektowanie analityki i zdarzeń (all-in-one)",
+            "price": 2500
+        }
     ]
 }
