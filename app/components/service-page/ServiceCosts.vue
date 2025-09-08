@@ -15,7 +15,11 @@ const props = defineProps({
 
 <template>
   <section class="service-costs" :id="heading.id">
-    <h2 class="service-costs__heading" :data-label="heading.tocLabel" :data-id="heading.id">
+    <h2
+      class="service-costs__heading"
+      :data-label="heading.tocLabel"
+      :data-id="heading.id"
+    >
       {{ heading.label }}
     </h2>
 
@@ -32,10 +36,27 @@ const props = defineProps({
         </div>
       </div>
     </div>
+
+    <div class="service-costs__alternative">
+      <p>
+        Wolisz indywidualną wycenę, lub chcesz wybrać poszczególne usługi z
+        oferty? Nie ma problemu!
+      </p>
+      <p>
+        <a href="#kontakt" title="Przejdź do formularza kontaktowego na naszej stronie">Napisz do nas</a> lub
+        <a
+          href="https://calendar.app.google/DwYLu7JAuHCp6rTX6"
+          target="_blank"
+          title="Otwórz kalendarz Google z dostępnymi terminami spotkania"
+          >umów bezpłatne spotkanie</a>
+        i porozmawiajmy o nowej ofercie.
+      </p>
+    </div>
   </section>
 </template>
 
 <style scoped lang="scss">
+@use "sass:color";
 @use "@styles/mixins" as *;
 @use "@styles/variables" as *;
 
@@ -48,8 +69,8 @@ const props = defineProps({
 
   @include on-mobile {
     padding: 10rem $mobile-section-padding 2rem;
-  background-position: 20% -10%;
-  background-size: 200%;
+    background-position: 20% -10%;
+    background-size: 200%;
   }
 
   &__heading {
@@ -68,7 +89,7 @@ const props = defineProps({
     grid-template-columns: repeat(3, 1fr);
 
     @include on-mobile {
-        grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 
@@ -104,6 +125,26 @@ const props = defineProps({
 
     @include on-mobile {
       font-size: $font-xxlarge-mobile;
+    }
+  }
+
+  &__alternative {
+    margin-top: 4rem;
+    font-size: $font-base;
+
+    p:not(:last-child) {
+      margin: 0;
+    }
+
+    a {
+      font-weight: bold;
+      color: color.adjust($primary-color, $lightness: -10%);
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
+    @include on-mobile {
+      font-size: $font-base-mobile;
     }
   }
 }
