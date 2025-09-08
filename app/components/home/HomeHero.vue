@@ -10,6 +10,9 @@
 
     <div class="home-hero__bottom">
       <div class="home-hero__description-wrapper">
+        <h1 class="home-hero__h1">
+          <slot name="description-h1" mdc-unwrap="p"></slot>
+        </h1>
         <slot name="description"></slot>
       </div>
       <div class="home-hero__bottom-right">
@@ -36,6 +39,18 @@
     flex-direction: column;
     margin-top: 1.5rem;
     padding: 0 $mobile-section-padding;
+  }
+
+  &__h1 {
+    font-size: $font-medium;
+    margin: 0 0 2rem;
+    font-weight: normal;
+    letter-spacing: .5px;
+    text-align: left;
+
+    @include on-mobile {
+      font-size: $font-medium-mobile;
+    }
   }
 
   &__logo {
