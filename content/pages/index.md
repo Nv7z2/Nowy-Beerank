@@ -6,6 +6,8 @@ schemaType: Service
 ---
 
 ::home-hero
+#description-h1
+Beerank - SEO i marketing.
 #description
 Pomożemy Ci ogarnąć marketing w internecie. W Beerank działamy z SEO, ścieżkami zakupowymi, reklamami i UX. 💰 Twoja strona zacznie zarabiać więcej.
 #thumbnail
