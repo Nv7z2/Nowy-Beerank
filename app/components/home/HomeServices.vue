@@ -1,11 +1,22 @@
-<script setup></script>
+<script setup>
+const props = defineProps({
+  isHeadingH1: {
+    type: Boolean,
+    required: false,
+    default: false
+  },
+});
+</script>
 
 <template>
 <section class="home-services">
     <div class="home-services__top">
-        <h2 class="home-services__heading">
+        <h2 class="home-services__heading" v-if="!isHeadingH1">
             <slot name="heading" mdc-unwrap="p"></slot>
         </h2>
+        <h1 class="home-services__heading" v-else>
+            <slot name="heading" mdc-unwrap="p"></slot>
+        </h1>
         <slot name="description"></slot>
     </div>
 </section>
