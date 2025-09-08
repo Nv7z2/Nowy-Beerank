@@ -1,28 +1,34 @@
 <template>
   <section class="services">
-    <div class="services__service" v-for="service in serviceBlocks" :key="service.name">
+    <NuxtLink
+      :to="service.link"
+      class="services__service"
+      v-for="service in serviceBlocks"
+      :key="service.name"
+      :title="service.name"
+    >
       <p class="services__service-name">{{ service.name }}</p>
-      <NuxtLink :to="service.link">
+      <div>
         <img
           :src="service.icon"
           role="presentation"
           class="services__service-icon"
         />
-      </NuxtLink>
+      </div>
       <div class="services__service-bottom-block">
         <p class="services__service-description">
           {{ service.description }}
         </p>
-        <NuxtLink :to="service.link" class="services__service-link">
+        <span class="services__service-link">
           Dowiedz się więcej
           <img
             src="@images/icons/arrow-right-black.svg"
             role="presentation"
             class="services__service-link-icon"
           />
-        </NuxtLink>
+        </span>
       </div>
-    </div>
+    </NuxtLink>
   </section>
 </template>
 
@@ -31,9 +37,10 @@ const serviceBlocks = [
   {
     name: "Analityka stron internetowych",
     icon: "/icons/service-1.svg",
-    description: "Instalowanie i wyjaśnienie Google Analytics 4 i Meta Pixel-a.",
+    description:
+      "Instalowanie i wyjaśnienie Google Analytics 4 i Meta Pixel-a.",
     link: "/oferta/analityka",
-  },  
+  },
   {
     name: "Pozycjonowanie stron i sklepów",
     icon: "/icons/service-2.svg",
@@ -43,7 +50,8 @@ const serviceBlocks = [
   {
     name: "Reklamy w Google",
     icon: "/icons/service-3.svg",
-    description: "Zajmiemy się Twoją reklamą w Google, remarketingiem i optymalizacją.",
+    description:
+      "Zajmiemy się Twoją reklamą w Google, remarketingiem i optymalizacją.",
     link: "/oferta/reklama",
   },
   {
@@ -73,6 +81,8 @@ const serviceBlocks = [
   &__service {
     background-color: #f9f9f9;
     display: flex;
+    text-decoration: none;
+    color: $text-color;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
