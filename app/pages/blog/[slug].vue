@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { h } from 'vue'
 import Breadcrumbs from "~/components/global/Breadcrumbs.vue";
 import DividerWithTitle from "~/components/global/DividerWithTitle.vue";
 import RecentBlogPosts from "~/components/global/RecentBlogPosts.vue";
@@ -6,8 +7,17 @@ import RecentBlogPosts from "~/components/global/RecentBlogPosts.vue";
 import { NuxtImg } from "#components";
 
 const components = {
-  img: NuxtImg,
-};
+  img(props) {
+    // Weź alt z props lub pusty string
+    const alt = props.alt || ''
+
+    return h(NuxtImg, {
+      ...props,
+      alt,
+      title: alt // zawsze przekazuj title
+    })
+  }
+}
 
 const route = useRoute();
 const { data: page } = await useAsyncData(
@@ -213,7 +223,18 @@ useSeoMeta({
 
     h3 {
       font-size: $font-medium;
-      margin-top: 2.5rem;
+      margin-top: 3.5rem;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.5rem;
+        width: 5rem;
+        height: 4px;
+        background-color: $primary-color;
+      }
 
       @include on-mobile {
         font-size: $font-medium-mobile;
