@@ -4,15 +4,6 @@ import DividerWithTitle from "~/components/global/DividerWithTitle.vue";
 import RecentBlogPosts from "~/components/global/RecentBlogPosts.vue";
 import { h } from 'vue'
 
-const components = {
-  img(props) {
-    return h('img', {
-      ...props,
-      loading: 'lazy'
-    })
-  }
-}
-
 const route = useRoute();
 const { data: page } = await useAsyncData(
   route.path,
@@ -21,6 +12,17 @@ const { data: page } = await useAsyncData(
       .path("/blog/" + route.params.slug)
       .first() // Adjust the path to match your content structure
 );
+
+const components = {
+  img(props) {
+    return h('img', {
+      ...props,
+      loading: 'lazy',
+      title: props.alt || page.value?.title,
+      decoding: 'async',
+    })
+  }
+}
 
 const metaTitle = computed(() => page?.value?.seo.title);
 const metaDesc = computed(() => page?.value?.seo.description);
