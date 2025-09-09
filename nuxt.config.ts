@@ -4,6 +4,10 @@ import { defineOrganization } from "nuxt-schema-org/schema";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
+  nitro: {
+    preset: "netlify",
+  },
+  target: "static",
   telemetry: false,
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
@@ -23,11 +27,11 @@ export default defineNuxtConfig({
     "@icons": resolve(__dirname, "assets/icons"),
   },
   image: {
-    domains: ['nowy-beerank.netlify.app', 'cdn.beerank.pl'],
-    provider: 'ipx'
+    domains: ["nowy-beerank.netlify.app", "cdn.beerank.pl"],
+    provider: "ipx",
   },
   features: {
-    inlineStyles: false
+    inlineStyles: false,
   },
   css: ["@styles/main.scss"],
   app: {
@@ -36,19 +40,12 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "pl",
       },
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }]
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.svg" }],
     },
     pageTransition: { name: "page", mode: "out-in" },
   },
   fonts: {
-    google: {
-      families: {
-        Inter: true,
-      },
-      preload: true, // włącza preload kluczowych fontów
-      prefetch: true, // opcjonalnie prefetch
-      display: "swap", // zapobiega blokadzie renderowania tekstu
-    },
+    families: [{ name: "Inter", provider: "google" }],
   },
   site: {
     trailingSlash: false,

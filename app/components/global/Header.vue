@@ -18,7 +18,7 @@ function closeMobileMenu() {
 <template>
   <header class="header">
     <div class="header__logo">
-      <NuxtLink to="/" aria-label="Logo Beerank - Przejdź do strony głównej">
+      <NuxtLink to="/" aria-label="Logo Beerank - Przejdź do strony głównej" prefetch>
         <img
           src="@images/beerank-sygnet.svg"
           alt="Logo"
@@ -29,14 +29,14 @@ function closeMobileMenu() {
     </div>
     <nav class="header__nav">
       <ul class="header__nav-list" ref="navigation">
-        <li><NuxtLink to="/oferta" class="header__link">Oferta</NuxtLink></li>
+        <li><NuxtLink to="/oferta" class="header__link" prefetch>Oferta</NuxtLink></li>
         <li>
           <NuxtLink to="/case-studies" class="header__link">
             Jak to robimy
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/blog" class="header__link">Baza wiedzy</NuxtLink>
+          <NuxtLink to="/blog" class="header__link" prefetch>Baza wiedzy</NuxtLink>
         </li>
         <li>
           <contact-button />

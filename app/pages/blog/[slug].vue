@@ -19,7 +19,7 @@ const { data: page } = await useAsyncData(
 const components = {
   img(props) {
     const src = props.src.startsWith("/") ? props.src : "/" + props.src;
-    const widths = [320, 480, 768, 1024, 1280]; // dostosuj rozmiary do potrzeb
+    const widths = [320, 480, 768, 1024, 1280, 1440]; // dostosuj rozmiary do potrzeb
 
     const srcset = widths
       .map(
@@ -31,12 +31,13 @@ const components = {
     const alt = props.alt || "";
     const sizes = "(max-width: 768px) 100vw, 768px";
 
-    return h("img", {
+    return h("NuxtImg", {
       ...props,
       alt,
       title: alt,
       loading: "lazy",
       decoding: "async",
+      fetchpriority: "low",
       src: `${NETLIFY_IMG_BASE}/.netlify/images?url=${encodeURIComponent(src)}&w=768`,
       srcset,
       sizes,
