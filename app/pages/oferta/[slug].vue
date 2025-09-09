@@ -20,6 +20,6 @@ useSeoMeta({
 
 <template>
   <main>
-    <ContentRenderer v-if="page" :value="page" />
+    <ContentRenderer :value="page" />
   </main>
 </template>
