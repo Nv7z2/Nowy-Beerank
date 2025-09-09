@@ -8,8 +8,8 @@ const props = defineProps({
     },
   },
   heading: {
-    type: Object,
-    validator: (val) => val.label && val.id,
+    type: String,
+    required: true,
   },
 });
 
@@ -30,9 +30,9 @@ function toggleBlock(index) {
 </script>
 
 <template>
-  <section class="service-process" :id="heading.id">
-    <h2 class="service-process__heading" :data-label="heading.tocLabel" :data-id="heading.id">
-      {{ heading.label }}
+  <section class="service-process" id="proces">
+    <h2 class="service-process__heading">
+      {{ heading }}
     </h2>
 
     <div class="service-process__inner-content">

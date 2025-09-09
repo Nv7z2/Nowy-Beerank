@@ -8,8 +8,8 @@ const props = defineProps({
     },
   },
   heading: {
-    type: Object,
-    validator: (val) => val.label && val.id,
+    type: String,
+    required: true,
   },
 }); 
 
@@ -39,9 +39,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="service-advantages" :id="heading.id">
-    <h2 class="service-advantages__heading" :data-label="heading.tocLabel" :data-id="heading.id">
-      {{ heading.label }}
+  <section class="service-advantages" id="korzysci">
+    <h2 class="service-advantages__heading">
+      {{ heading }}
     </h2>
 
     <div class="service-advantages__blocks">

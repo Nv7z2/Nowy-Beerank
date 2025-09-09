@@ -33,11 +33,7 @@ blocks:
   description: "Analizujemy zachowania i potrzeby odbiorców, żeby dostarczać treści i funkcjonalności, które dokładnie odpowiadają na ich oczekiwania."
 - title: "Szybsza i bardziej intuicyjna strona"
   description: "Dbamy o szybkość działania oraz łatwość poruszania się po stronie, co wpływa na satysfakcję użytkowników i lepsze wyniki SEO."
-heading: {
-  label: 'Jak SXO pomoże Ci zatrzymać klientów na stronie',
-  id: 'korzysci',
-  tocLabel: 'Korzyści z SXO'
-}
+heading: 'Jak SXO pomoże Ci zatrzymać klientów na stronie'
 ---
 ::
 
@@ -56,22 +52,14 @@ blocks:
   description: "Na podstawie ustaleń poprawiamy Twoją stronę tak, by była łatwa w obsłudze i przyjazna dla wyszukiwarki. Może to być np. skrócenie ścieżki zamówienia lub dodanie wyraźnego wezwania do działania („Kup teraz!”, „Zadzwoń do nas”)."
 - title: "Sprawdzamy efekty i ciągle usprawniamy"
   description: "Po wprowadzeniu zmian monitorujemy, czy więcej osób zostaje na stronie i finalizuje zakup lub kontakt. Jeśli widzimy coś, co można jeszcze poprawić, szybko działamy. Przykład: jeśli klienci rezygnują przy wypełnianiu formularza, uprościmy go lub podzielimy na kroki."
-heading: {
-  label: 'Jak możemy Ci pomóc',
-  id: 'proces',
-  tocLabel: 'Jak możemy Ci pomóc'
-}
+heading: 'Jak możemy Ci pomóc'
 ---
 ::
 
 ::service-page-service-costs
 ---
 serviceType: 'sxo'
-heading: {
-  label: 'Ile kosztuje SXO w Beerank',
-  id: 'cennik',
-  tocLabel: 'Ile to kosztuje?'
-}
+heading: 'Ile kosztuje SXO w Beerank'
 ---
 ::
 

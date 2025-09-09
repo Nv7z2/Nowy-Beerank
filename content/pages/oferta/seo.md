@@ -40,11 +40,7 @@ blocks:
   description: "Dobrze zaplanowana kampania SEO to długofalowy wzrost pozycji w Google"
 - title: "Z naciskiem na korzyści"
   description: "SEO buduje Twoją pozycję, generuje wartościowy ruch i obniża koszty pozyskania klienta."
-heading: {
-  label: 'Zdobądź przewagę konkurencyjną, zwiększając widoczność Twojej marki w internecie.',
-  id: 'korzysci',
-  tocLabel: 'Korzyści z kampani SEO'
-}
+heading: 'Zdobądź przewagę konkurencyjną, zwiększając widoczność Twojej marki w internecie.'
 ---
 #heading
 Zdobądź przewagę konkurencyjną, zwiększając widoczność Twojej marki w internecie.
@@ -65,11 +61,7 @@ blocks:
   description: "Twoim celem jest przyciągnącie wzroku potencjalnego klienta, tak aby nie mógł oderwać oczu od reklamy tak samo, jakby nie mógł oderwać wzroku od wystawy sklepowej."
 - title: "Optymalizacja na stronie"
   description: "Twoim celem jest przyciągnącie wzroku potencjalnego klienta, tak aby nie mógł oderwać oczu od reklamy tak samo, jakby nie mógł oderwać wzroku od wystawy sklepowej.."
-heading: {
-  label: 'Wiedza, trendy, skuteczne strategie',
-  id: 'proces',
-  tocLabel: 'Proces'
-}
+heading: 'Wiedza, trendy, skuteczne strategie'
 ---
 #heading
 Wiedza, trendy, skuteczne strategie
@@ -78,11 +70,7 @@ Wiedza, trendy, skuteczne strategie
 ::service-page-service-costs
 ---
 serviceType: 'seo'
-heading: {
-  label: 'Ile kosztuje SEO z Beerank',
-  id: 'cennik',
-  tocLabel: 'Ile to kosztuje?'
-}
+heading: 'Ile kosztuje SEO z Beerank'
 ---
 ::
 

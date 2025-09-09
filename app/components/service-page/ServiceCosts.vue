@@ -3,8 +3,8 @@ import pricing from "~/constants/pricing.json";
 
 const props = defineProps({
   heading: {
-    type: Object,
-    validator: (val) => val.label && val.id,
+    type: String,
+    required: true,
   },
   serviceType: {
     type: String,
@@ -14,7 +14,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <section class="service-costs" :id="heading.id">
+  <section class="service-costs" id="cennik">
     <h2
       class="service-costs__heading"
       :data-label="heading.tocLabel"

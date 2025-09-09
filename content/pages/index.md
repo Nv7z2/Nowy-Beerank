@@ -33,7 +33,7 @@ links:
 - label: Pozycjonowanie
   url: /oferta/seo
 - label: Reklamy Google
-  url: /oferta/google-ads
+  url: /oferta/reklama
 - label: 'UI/UX'
   url: /oferta/ui-ux
 ---

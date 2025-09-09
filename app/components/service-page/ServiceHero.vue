@@ -1,16 +1,20 @@
 <script setup>
-import ContactButton from '../global/ContactButton.vue';
+import ContactButton from "../global/ContactButton.vue";
 
-let h2headings = ref([]);
-
-onMounted(() => {
-  const allH2Headings = document.querySelectorAll("h2");
-
-  allH2Headings.forEach((h2) => {
-    if (!h2.dataset.id) return;
-    h2headings.value.push({ dataset: h2.dataset });
-  });
-});
+const staticToc = [
+  {
+    label: "Jakie są korzyści",
+    url: "#korzysci"
+  },
+  {
+    label: "Jak możemy Ci pomóc",
+    url: "#proces"
+  },
+  {
+    label: "Ile to kosztuje",
+    url: "#cennik"
+  }
+]
 </script>
 
 <template>
@@ -39,17 +43,17 @@ onMounted(() => {
           <p class="service-hero__toc-label">Na skróty</p>
           <ul class="service-hero__toc-list">
             <li
-              v-for="link in h2headings"
-              :key="link.dataset.id"
+              v-for="link in staticToc"
+              :key="link.url"
               class="service-hero__toc-element"
             >
-              <a :href="'#' + link.dataset.id" class="service-hero__toc-link">
+              <a :href="link.url" class="service-hero__toc-link">
                 <img
                   src="@images/icons/arrow-right-black.svg"
                   role="presentation"
                   alt=""
                 />
-                {{ link.dataset.label }}
+                {{ link.label }}
               </a>
             </li>
           </ul>

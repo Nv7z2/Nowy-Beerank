@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 const { data: page } = await useAsyncData(route.path, () =>
-  queryCollection("pages").path('/pages/uslugi').first() // Adjust the path to match your content structure
+  queryCollection("pages").path('/pages/oferta').first() // Adjust the path to match your content structure
 );
 
 const metaTitle = computed(() => page?.value?.seo.title);

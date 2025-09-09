@@ -33,11 +33,7 @@ blocks:
   description: "Tworzymy i sprawdzamy różne warianty reklam, aby znaleźć te, które przyciągają najwięcej klientów. Przy tym dzielimy budżet na testowy i docelowy."
 - title: "Transparentne raportowanie"
   description: "Regularnie raportujemy efekty, dając Ci pełną kontrolę i jasny obraz zwrotu z inwestycji. Opiszemy Ci jaki był koszt pozyskania klienta i ocenimy przyszłe efekty."
-heading: {
-  label: 'Jak reklamy mogą Ci pomóc w zysku netto',
-  id: 'korzysci',
-  tocLabel: 'Korzyści z reklam'
-}
+heading: 'Jak reklamy mogą Ci pomóc w zysku netto'
 ---
 ::
 
@@ -56,22 +52,14 @@ blocks:
   description: "Przygotowujemy odpowiednie, angażujące teksty, grafiki i filmy. Przestujemy różne formaty i warianty reklam. Po akceptacji uruchamiamy kampanie i monitorujemy ich działanie od pierwszego dnia. Pokażemy Ci też jak samodzielnie sprawdzać wyniki na bieżąco."
 - title: "Optymalizacja i raportowanie wyników"
   description: "Na bieżąco analizujemy kampanie, wprowadzamy niezbędne zmiany, żeby zwiększyć efektywność wydatków. Regularnie wysyłamy Ci przejrzyste raporty z wynikami i rekomendacjami oraz uzasadnieniami zmian w kreacjach."
-heading: {
-  label: 'Jak możemy Ci pomóc',
-  id: 'proces',
-  tocLabel: 'Jak możemy Ci pomóc'
-}
+heading: 'Jak możemy Ci pomóc'
 ---
 ::
 
 ::service-page-service-costs
 ---
 serviceType: 'reklama'
-heading: {
-  label: 'Ile kosztuje reklamowania się z Beerank',
-  id: 'cennik',
-  tocLabel: 'Ile to kosztuje?'
-}
+heading: 'Ile kosztuje reklamowania się z Beerank'
 ---
 ::
 

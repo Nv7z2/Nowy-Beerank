@@ -33,11 +33,7 @@ blocks:
   description: "Mając dane o zachowaniu (np. z Microsoft Clarity) przetestuj rózne wariacje stron, na które kierujesz ruch"
 - title: "Mierz efekty"
   description: "Z poprawioną ścieżką monitoruj rosnącą tendencję na większą liczbę klientów dla swoich usług lub produktów"
-heading: {
-  label: 'Analityka to nie tylko tabelki w Excelu.',
-  id: 'korzysci',
-  tocLabel: 'Korzyści z analityki strony www'
-}
+heading: 'Analityka to nie tylko tabelki w Excelu.'
 ---
 ::
 
@@ -56,22 +52,14 @@ blocks:
   description: "Zajmiemy się pełnym wdrożeniem Google Tag Managera, Google Analytics 4 oraz Microsoft Clarity. Ustawimy zdarzenia i konwersje tak, abyś mógł monitorować kluczowe i dochodowe akcje użytkowników."
 - title: "Automatyzacja i raportowanie"
   description: "Wdrożymy automatyczne śledzenie zdarzeń oraz przygotujemy czytelne raporty. Dzięki temu łatwo ocenisz skuteczność działań i szybko podejmiesz trafne decyzje."
-heading: {
-  label: 'Jak możemy Ci pomóc',
-  id: 'proces',
-  tocLabel: 'Jak możemy Ci pomóc'
-}
+heading: 'Jak możemy Ci pomóc'
 ---
 ::
 
 ::service-page-service-costs
 ---
 serviceType: 'analityka'
-heading: {
-  label: 'Ile kosztuje wdrożenie i audyt Analityki',
-  id: 'cennik',
-  tocLabel: 'Ile to kosztuje?'
-}
+heading: 'Ile kosztuje wdrożenie i audyt Analityki'
 ---
 ::
 
