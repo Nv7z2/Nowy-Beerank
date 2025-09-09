@@ -31,7 +31,6 @@ export default defineNuxtConfig({
   },
   css: ["@styles/main.scss"],
   app: {
-    trailingSlash: false,
     hydrate: true,
     head: {
       htmlAttrs: {
@@ -52,6 +51,7 @@ export default defineNuxtConfig({
     },
   },
   site: {
+    trailingSlash: false,
     url: "https://beerank.pl",
     name: "Beerank - Pozycjonowanie SEO i Marketing w internecie",
   },

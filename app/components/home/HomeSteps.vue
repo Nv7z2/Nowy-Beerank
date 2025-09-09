@@ -174,7 +174,8 @@ onBeforeUnmount(() => {
         text-transform: uppercase;
         padding: 0.625rem 1rem;
         border-radius: 2rem;
-        background-color: rgba(#0d0d0d, 0.075);
+        // background-color: rgba(#0d0d0d, 0.075);
+        border: 1px solid rgba($primary-color, 0.95);
         display: inline-block;
         font-weight: bold;
         letter-spacing: .5px;
@@ -185,6 +186,7 @@ onBeforeUnmount(() => {
 
         &:hover {
           color: $text-color-white;
+          border-color: transparent;
           background-color: color.adjust($primary-color, $lightness: -10%);
         }
       }
@@ -263,6 +265,7 @@ onBeforeUnmount(() => {
 
   &__step-link--active {
     color: $text-color-white !important;
+    border-color: transparent !important;
     background-color: color.adjust($primary-color, $lightness: -10%) !important;
   }
 }
