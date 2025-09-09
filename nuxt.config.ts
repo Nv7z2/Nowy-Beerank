@@ -3,6 +3,7 @@ import { defineOrganization } from "nuxt-schema-org/schema";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: true,
   telemetry: false,
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
@@ -10,7 +11,6 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "@nuxt/content",
     "@nuxt/fonts",
-    "@nuxt/image",
     "@nuxt/scripts",
     "nuxt-schema-org",
   ],
@@ -23,6 +23,7 @@ export default defineNuxtConfig({
   },
   css: ["@styles/main.scss"],
   app: {
+    hydrate: true,
     head: {
       htmlAttrs: {
         lang: "pl",
