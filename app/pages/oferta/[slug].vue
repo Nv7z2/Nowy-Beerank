@@ -1,11 +1,15 @@
 <script setup lang="ts">
 const route = useRoute()
 const { data: page } = await useAsyncData(route.path, () =>
-  queryCollection("pages").path('/pages/oferta/' + route.params.slug).first() // Adjust the path to match your content structure
+  queryCollection("pages").path('/pages/oferta/' + route.params.slug).first(), {
+    initialCache: false
+  }
 );
 
-const metaTitle = computed(() => page?.value?.seo.title);
-const metaDesc = computed(() => page?.value?.seo.description);
+const pageSafe = computed(() => page?.value ?? {})
+
+const metaTitle = computed(() => pageSafe?.value?.seo.title);
+const metaDesc = computed(() => pageSafe?.value?.seo.description);
 
 useSeoMeta({
   title: metaTitle,
@@ -20,6 +24,6 @@ useSeoMeta({
 
 <template>
   <main>
-    <ContentRenderer :value="page" />
+    <ContentRenderer :value="pageSafe" />
   </main>
 </template>
