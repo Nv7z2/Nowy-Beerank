@@ -35,7 +35,7 @@ links:
 - label: Reklamy Google
   url: /oferta/reklama
 - label: 'UI/UX'
-  url: /oferta/ui-ux
+  url: /oferta/sxo
 ---
 #description
 Zbieraj nektar sukcesu, zwiększając swoją obecność w wynikach wyszukiwania i budując przewagę na rynku.

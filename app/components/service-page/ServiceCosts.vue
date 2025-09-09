@@ -15,12 +15,8 @@ const props = defineProps({
 
 <template>
   <section class="service-costs" id="cennik">
-    <h2
-      class="service-costs__heading"
-      :data-label="heading.tocLabel"
-      :data-id="heading.id"
-    >
-      {{ heading.label }}
+    <h2 class="service-costs__heading">
+      {{ heading }}
     </h2>
 
     <div class="service-costs__boxes">
@@ -43,12 +39,18 @@ const props = defineProps({
         oferty? Nie ma problemu!
       </p>
       <p>
-        <a href="#kontakt" title="Przejdź do formularza kontaktowego na naszej stronie">Napisz do nas</a> lub
+        <a
+          href="#kontakt"
+          title="Przejdź do formularza kontaktowego na naszej stronie"
+          >Napisz do nas</a
+        >
+        lub
         <a
           href="https://calendar.app.google/DwYLu7JAuHCp6rTX6"
           target="_blank"
           title="Otwórz kalendarz Google z dostępnymi terminami spotkania"
-          >umów bezpłatne spotkanie</a>
+          >umów bezpłatne spotkanie</a
+        >
         i porozmawiajmy o nowej ofercie.
       </p>
     </div>
