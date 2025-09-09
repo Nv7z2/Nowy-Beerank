@@ -6,7 +6,6 @@ import { h } from 'vue'
 
 const components = {
   img(props) {
-    // Wymuś lazy loading na każdym img
     return h('img', {
       ...props,
       loading: 'lazy'
