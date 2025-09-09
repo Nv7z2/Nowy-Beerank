@@ -29,7 +29,7 @@ const components = {
       .join(", ");
 
     const alt = props.alt || "";
-    const sizes = "(max-width: 768px) 100vw, 768px";
+    const sizes = "(max-width: 768px) 100vw, 1280px";
 
     return h("img", {
       ...props,
