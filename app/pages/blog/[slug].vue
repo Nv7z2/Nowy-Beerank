@@ -2,8 +2,10 @@
 import Breadcrumbs from "~/components/global/Breadcrumbs.vue";
 import DividerWithTitle from "~/components/global/DividerWithTitle.vue";
 import RecentBlogPosts from "~/components/global/RecentBlogPosts.vue";
-import { h } from 'vue'
-import { NuxtImg } from '#components'
+import { h } from "vue";
+import { NuxtImg } from "#components";
+
+const NETLIFY_IMG_BASE = ''
 
 const route = useRoute();
 const { data: page } = await useAsyncData(
@@ -16,34 +18,31 @@ const { data: page } = await useAsyncData(
 
 const components = {
   img(props) {
-    const desktopWidth = 1280
-    const mobileWidth = 480
+    const src = props.src.startsWith("/") ? props.src : "/" + props.src;
+    const widths = [320, 480, 768, 1024, 1280]; // dostosuj rozmiary do potrzeb
 
-    const alt = props.alt || ''
-    const height = props.height ? Number(props.height) : undefined
+    const srcset = widths
+      .map(
+        (w) =>
+          `${NETLIFY_IMG_BASE}/.netlify/images?url=${encodeURIComponent(src)}&w=${w} ${w}w`
+      )
+      .join(", ");
 
-    const srcset = [
-      `${props.src}?w=${Math.floor(mobileWidth / 2)} ${Math.floor(mobileWidth / 2)}w`,
-      `${props.src}?w=${mobileWidth} ${mobileWidth}w`,
-      `${props.src}?w=${desktopWidth} ${desktopWidth}w`,
-      `${props.src}?w=${desktopWidth * 2} ${desktopWidth * 2}w`
-    ].join(', ')
+    const alt = props.alt || "";
+    const sizes = "(max-width: 768px) 100vw, 768px";
 
-    const sizes = `(max-width: 768px) 100vw, ${desktopWidth}px`
-
-    return h(NuxtImg, {
+    return h("img", {
       ...props,
       alt,
       title: alt,
-      loading: 'lazy',
-      decoding: 'async',
-      width: desktopWidth,
-      height,
+      loading: "lazy",
+      decoding: "async",
+      src: `${NETLIFY_IMG_BASE}/.netlify/images?url=${encodeURIComponent(src)}&w=768`,
       srcset,
-      sizes
-    })
-  }
-}
+      sizes,
+    });
+  },
+};
 
 const metaTitle = computed(() => page?.value?.seo.title);
 const metaDesc = computed(() => page?.value?.seo.description);

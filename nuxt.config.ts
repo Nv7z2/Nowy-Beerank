@@ -28,6 +28,7 @@ export default defineNuxtConfig({
   },
   css: ["@styles/main.scss"],
   app: {
+    trailingSlash: false,
     hydrate: true,
     head: {
       htmlAttrs: {
