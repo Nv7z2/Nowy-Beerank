@@ -38,7 +38,7 @@ const components = {
       loading: "lazy",
       decoding: "async",
       fetchpriority: "low",
-      src: `${NETLIFY_IMG_BASE}/.netlify/images?url=${encodeURIComponent(src)}&w=768`,
+      src: `${NETLIFY_IMG_BASE}/.netlify/images?url=${encodeURIComponent(src)}&w=1280`,
       srcset,
       sizes,
     });
