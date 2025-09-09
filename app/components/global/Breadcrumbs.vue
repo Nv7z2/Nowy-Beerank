@@ -30,12 +30,12 @@ const props = defineProps({
   }
 
   a {
-    color: rgba($color-black, 0.4);
+    color: #4F4F4F;
     text-decoration: none;
 
     &::after {
       content: "•";
-      color: rgba($color-black, 0.4);
+      color: #4F4F4F;
       display: inline-block;
       margin: 0 0.75rem;
     }

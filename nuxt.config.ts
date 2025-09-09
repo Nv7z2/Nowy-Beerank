@@ -26,6 +26,9 @@ export default defineNuxtConfig({
     domains: ['nowy-beerank.netlify.app', 'cdn.beerank.pl'],
     provider: 'ipx'
   },
+  features: {
+    inlineStyles: false
+  },
   css: ["@styles/main.scss"],
   app: {
     trailingSlash: false,
