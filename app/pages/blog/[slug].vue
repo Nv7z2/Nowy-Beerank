@@ -31,7 +31,7 @@ const components = {
     const alt = props.alt || "";
     const sizes = "(max-width: 768px) 100vw, 768px";
 
-    return h("NuxtImg", {
+    return h("img", {
       ...props,
       alt,
       title: alt,
