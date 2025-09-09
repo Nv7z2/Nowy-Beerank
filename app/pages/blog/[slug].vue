@@ -2,6 +2,17 @@
 import Breadcrumbs from "~/components/global/Breadcrumbs.vue";
 import DividerWithTitle from "~/components/global/DividerWithTitle.vue";
 import RecentBlogPosts from "~/components/global/RecentBlogPosts.vue";
+import { h } from 'vue'
+
+const components = {
+  img(props) {
+    // Wymuś lazy loading na każdym img
+    return h('img', {
+      ...props,
+      loading: 'lazy'
+    })
+  }
+}
 
 const route = useRoute();
 const { data: page } = await useAsyncData(
@@ -84,6 +95,7 @@ useSeoMeta({
           v-if="page"
           :value="page"
           style="scroll-margin-top: 8rem"
+          :components="components"
         />
       </div>
     </article>
