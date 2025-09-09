@@ -22,6 +22,10 @@ export default defineNuxtConfig({
     "@images": resolve(__dirname, "assets/images"),
     "@icons": resolve(__dirname, "assets/icons"),
   },
+  image: {
+    domains: ['nowy-beerank.netlify.app', 'cdn.beerank.pl'],
+    provider: 'ipx'
+  },
   css: ["@styles/main.scss"],
   app: {
     hydrate: true,
