@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxt/fonts",
     "@nuxt/scripts",
+    "@nuxt/image",
     "nuxt-schema-org",
   ],
   alias: {

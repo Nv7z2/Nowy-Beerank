@@ -30,6 +30,8 @@ Jeśli zarządzasz wieloma kontami GA4, po zalogowaniu zobaczysz ich listę. Wyb
 
 Po przejściu do wybranego konta GA4 kliknij ikonę **koła zębatego** w lewym dolnym rogu ekranu. Spowoduje to otwarcie panelu **Administracja**, gdzie można zarządzać różnymi ustawieniami konta i usługi.
 
+![1-google-analytics-wybor-konta](/img/blog/ga4-dodawanie-uzytkownika/1-google-analytics-wybor-konta.avif)
+
 ![1 google analytics - wybór konta](https://cdn.beerank.pl/blog/google-analytics-dodawanie-uzytkownika/1-google-analytics-wybor-konta.avif)
 
 ![2 google analytics - przejście do ustawień](https://cdn.beerank.pl/blog/google-analytics-dodawanie-uzytkownika/2-google-analytics-przejscie-do-ustawien.avif)

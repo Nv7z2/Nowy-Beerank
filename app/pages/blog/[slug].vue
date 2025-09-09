@@ -3,6 +3,7 @@ import Breadcrumbs from "~/components/global/Breadcrumbs.vue";
 import DividerWithTitle from "~/components/global/DividerWithTitle.vue";
 import RecentBlogPosts from "~/components/global/RecentBlogPosts.vue";
 import { h } from 'vue'
+import { NuxtImg } from '#components'
 
 const route = useRoute();
 const { data: page } = await useAsyncData(
@@ -15,11 +16,36 @@ const { data: page } = await useAsyncData(
 
 const components = {
   img(props) {
-    return h('img', {
+    // Ustaw podstawowe szerokości dla desktop i mobile
+    const desktopWidth = 1280
+    const mobileWidth = 480
+
+    // Z alt i height jak wcześniej
+    const alt = props.alt || ''
+    const height = props.height ? Number(props.height) : undefined
+
+    // Generujemy srcset z trzema rozmiarami dla desktop i mobile (do 2x rozdzielczość)
+    const srcset = [
+      `${props.src}?w=${Math.floor(mobileWidth / 2)} ${Math.floor(mobileWidth / 2)}w`,
+      `${props.src}?w=${mobileWidth} ${mobileWidth}w`,
+      `${props.src}?w=${desktopWidth} ${desktopWidth}w`,
+      `${props.src}?w=${desktopWidth * 2} ${desktopWidth * 2}w`
+    ].join(', ')
+
+    // sizes mówią przeglądarce, że dla ekranów do 768px obraz zajmuje full width viewport (100vw),
+    // a powyżej używamy 1280px
+    const sizes = `(max-width: 768px) 100vw, ${desktopWidth}px`
+
+    return h(NuxtImg, {
       ...props,
+      alt,
+      title: alt,
       loading: 'lazy',
-      title: props.alt || page.value?.title,
       decoding: 'async',
+      width: desktopWidth, // można ustawić szerokość bazową dla desktop
+      height,
+      srcset,
+      sizes
     })
   }
 }
