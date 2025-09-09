@@ -23,8 +23,8 @@ export default defineNuxtConfig({
   },
   css: ["@styles/main.scss"],
   image: {
-    provider: "ipx",
-    domains: ["cdn.beerank.pl"],
+    provider: 'netlify',
+    domains: ['cdn.beerank.pl']
   },
   app: {
     head: {
