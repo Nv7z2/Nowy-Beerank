@@ -262,8 +262,8 @@ onBeforeUnmount(() => {
   }
 
   &__step-link--active {
-    color: $text-color-white !important;
-    background-color: color.adjust($primary-color, $lightness: -10%) !important;
+    color: $text-color !important;
+    background-color: $primary-color !important;
   }
 }
 </style>
