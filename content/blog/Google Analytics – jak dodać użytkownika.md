@@ -32,7 +32,7 @@ Po przejściu do wybranego konta GA4 kliknij ikonę **koła zębatego** w lewym 
 
 ![Google Analytics - przejście do ustawień 1](img/blog/ga4-dodawanie-uzytkownika/1-google-analytics-wybor-konta.avif)
 
-![Google Analytics - przejście do ustawień 2](2-google-analytics-przejscie-do-ustawien.avif)
+![Google Analytics - przejście do ustawień 2](img/blog/ga4-dodawanie-uzytkownika/2-google-analytics-przejscie-do-ustawien.avif)
 
 ## Dodawanie użytkownika do konta lub usługi
 
@@ -51,7 +51,7 @@ Jeśli chcesz dodać użytkownika tylko do jednej usługi, przejdź do sekcji �
 
 Natomiast jeśli posiadasz więcej niż jedną usługę, np. stronę internetową i aplikację mobilną osobno, lepiej wybrać opcję „Zarządzaj dostępem do usługi”  
 
-![Google Analytics - Wybór konto lub usługa](3-google-analytics-dostep-do-konta-lub-uslugi.avif)
+![Google Analytics - Wybór konto lub usługa](img/blog/ga4-dodawanie-uzytkownika/3-google-analytics-dostep-do-konta-lub-uslugi.avif)
 
 ## Dodanie nowego użytkownika
 
@@ -62,9 +62,9 @@ Po kliknięciu opcji „Zarządzanie dostępem do konta” lub „Zarządzanie d
 
 Otworzy się okno, w którym będziesz mógł dodać nową osobę.
 
-![Google Analytics - dodawanie użytkownika](4-google-analytics-dodanie-uzytkownika.avif)
+![Google Analytics - dodawanie użytkownika](img/blog/ga4-dodawanie-uzytkownika/4-google-analytics-dodanie-uzytkownika.avif)
 
-![Google Analytics - dodawanie użytkownika 2](5-google-analytics-dodanie-uzytkownika-2.avif)
+![Google Analytics - dodawanie użytkownika 2](img/blog/ga4-dodawanie-uzytkownika/5-google-analytics-dodanie-uzytkownika-2.avif)
 
 W formularzu zobaczysz pole **adres e-mail**. Wpisz adres e-mail użytkownika, którego chcesz dodać.
 
@@ -75,7 +75,7 @@ Ważne:
 
 Możesz również zaznaczyć opcję **Powiadom nowego użytkownika e-mailem**, aby Google automatycznie wysłało mu informację o przyznanym dostępie.
 
-![Google Analytics - podawanie adresu e-mail](6-google-analytics-podanie-adresu-e-mail.avif)
+![Google Analytics - podawanie adresu e-mail](img/blog/ga4-dodawanie-uzytkownika/6-google-analytics-podanie-adresu-e-mail.avif)
 
 ## Wybór roli
 
@@ -88,10 +88,10 @@ Google Analytics 4 pozwala na nadanie różnych poziomów dostępu:
 
 Wybierz odpowiednią rolę, w zależności od tego, jakie uprawnienia powinien mieć nowy użytkownik.
 
-![Google Analytics - wybór roli dla nowego użytkownika](7-google-analytics-wybor-roli.avif)
+![Google Analytics - wybór roli dla nowego użytkownika](img/blog/ga4-dodawanie-uzytkownika/7-google-analytics-wybor-roli.avif)
 
 Po wybraniu uprawnień kliknij **Dodaj**, aby zapisać zmiany.
 
 Nowy użytkownik otrzyma zaproszenie na podany adres e-mail i będzie mógł zalogować się do Google Analytics 4, korzystając z przyznanych uprawnień.
 
-![Google Analytics - zatwierdzanie zmian](8-google-analytics-zatwierdzanie-zmian.avif)
+![Google Analytics - zatwierdzanie zmian](img/blog/ga4-dodawanie-uzytkownika/8-google-analytics-zatwierdzanie-zmian.avif)
