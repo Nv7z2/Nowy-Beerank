@@ -3,30 +3,20 @@ import Breadcrumbs from "~/components/global/Breadcrumbs.vue";
 import DividerWithTitle from "~/components/global/DividerWithTitle.vue";
 import RecentBlogPosts from "~/components/global/RecentBlogPosts.vue";
 import { h } from "vue";
-import { NuxtImg } from "#components";
 
 const NETLIFY_IMG_BASE = "";
 
-function convertObsidianImageMarkdownToNuxtImage(markdown: String) {
-  return markdown.replace(/!\[\[([^\]]+)\]\]/g, (match, filename) => {
-    const altText = filename.replace(/-/g, ' ')
-    return `![${altText}](${filename})`
-  })
-}
-
 const route = useRoute();
-const { data: page } = await useAsyncData(
-    route.path,
-    () =>
-        queryCollection("blog")
-            .path("/blog/" + route.params.slug)
-            .first() // Adjust the path to match your content structure
+const { data: page } = await useAsyncData(route.path, () =>
+    queryCollection("blog")
+        .path("/blog/" + route.params.slug)
+        .first()
 );
 
 const components = {
     img(props) {
         const src = props.src.startsWith("/") ? props.src : "/" + props.src;
-        const widths = [320, 480, 768, 1024, 1280, 1440]; // dostosuj rozmiary do potrzeb
+        const widths = [320, 480, 768, 1024, 1280, 1440];
 
         const srcset = widths
             .map(
@@ -51,13 +41,6 @@ const components = {
         });
     },
 };
-
-const rawMarkdown = ref('')
-
-// Po pobraniu markdowna podmieniamy składnię Obsidiana
-if(post.value?.length > 0) {
-  rawMarkdown.value = convertObsidianImageMarkdownToNuxtImage(post.value[0].bodyRaw || post.value[0].body)
-}
 
 const metaTitle = computed(() => page?.value?.seo.title);
 const metaDesc = computed(() => page?.value?.seo.description);
@@ -128,8 +111,7 @@ useSeoMeta({
 
             <div class="blog-post__content-inner">
                 <ContentRenderer
-                    v-if="page"
-                    :value="page"
+                    :value="page ?? { body: [] }"
                     style="scroll-margin-top: 8rem"
                     :components="components"
                 />

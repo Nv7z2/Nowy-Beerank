@@ -27,6 +27,6 @@ useSeoMeta({
 
 <template>
     <main>
-        <ContentRenderer v-if="page" :value="pagepageSafe" />
+        <ContentRenderer :value="page ?? { body: [] }" />
     </main>
 </template>
