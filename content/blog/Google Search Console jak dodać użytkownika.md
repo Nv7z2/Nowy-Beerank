@@ -1,12 +1,15 @@
 ---
-title:
-description:
-date:
+title: Google Search Console - jak dodać użytkownika krok po kroku
+description: To wszystko! W kilka minut możesz dodać nową osobę do Google Search Console i zapewnić jej dostęp do niezbędnych danych o Twojej witrynie.
+date: 2025-09-12
 tags:
   - poradnik
+  - google-search-console
 author: Kacper Baran
-heading:
-teaser:
+heading: Google Search Console - jak dodać użytkownika krok po kroku
+teaser: |-
+  Google Search Console (GSC) to kluczowe narzędzie dla właścicieli stron internetowych, pomagające monitorować widoczność witryny w wyszukiwarce Google.
+  Czasami konieczne jest udzielenie dostępu innym osobom, np. członkom zespołu SEO, administratorom strony lub agencjom marketingowym.
 ---
 1. **Zaloguj się do Google Search Console** i wybierz odpowiednią witrynę.
 2. **Przejdź do „Ustawień”** w lewym dolnym rogu.
@@ -18,8 +21,6 @@ teaser:
 8. **Poczekaj na przetworzenie zmian przez Google** – użytkownik otrzyma zaproszenie e-mailowe.
 
 To wszystko! W kilka minut możesz dodać nową osobę do Google Search Console i zapewnić jej dostęp do niezbędnych danych o Twojej witrynie.
-
-Google Search Console (GSC) to kluczowe narzędzie dla właścicieli stron internetowych, pomagające monitorować widoczność witryny w wyszukiwarce Google. Czasami konieczne jest udzielenie dostępu innym osobom, np. członkom zespołu SEO, administratorom strony lub agencjom marketingowym.
 
 ## Wybierz konto i przejdź do ustawień
 
