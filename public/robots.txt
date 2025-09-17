@@ -1,10 +1,8 @@
-Disallow: * 
-
-# User-agent: *
-# Disallow: /raport/
-# Disallow: /oferta/
+User-agent: *
+Disallow: /raport/
+Disallow: /o/
 
 # Ewentualne dodatkowe reguły możesz dodać poniżej
-# Allow: /
+Allow: /
 
-# Sitemap: https://beerank.pl/sitemap.xml
+Sitemap: https://beerank.pl/sitemap.xml
