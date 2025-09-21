@@ -10,27 +10,27 @@ teaser: Google Ads to platforma reklamowa Google, pozwalająca firmom i agencjom
 ---
 ## Dodanie konta Google Ads do konta menedżerskiego agencji:
 
-1. 1. Zaloguj się do Google Ads.
+1. Zaloguj się do Google Ads.
 
-2. 1. Skopiuj **identyfikator konta** i przekaż go agencji.
+2. Skopiuj **identyfikator konta** i przekaż go agencji.
 
-3. 1. Oczekuj na **wiadomość e-mail z Google Ads**.
+3. Oczekuj na **wiadomość e-mail z Google Ads**.
 
-4. 1. Zaakceptuj prośbę o przypisanie konta do menedżera agencji.
+4. Zaakceptuj prośbę o przypisanie konta do menedżera agencji.
 
 ## Dodanie użytkownika do konta Google Ads:
 
-1. 1. Zaloguj się do Google Ads i przejdź do ustawień **„Dostęp i bezpieczeństwo”**.
+1. Zaloguj się do Google Ads i przejdź do ustawień **„Dostęp i bezpieczeństwo”**.
 
-2. 1. Kliknij **niebieski przycisk „+”**, aby dodać nowego użytkownika.
+2. Kliknij **niebieski przycisk „+”**, aby dodać nowego użytkownika.
 
-3. 1. Podaj adres e-mail osoby, którą chcesz dodać.
+3. Podaj adres e-mail osoby, którą chcesz dodać.
 
-4. 1. Wybierz **poziom uprawnień** (Administrator, Standardowy, Odczyt).
+4. Wybierz **poziom uprawnień** (Administrator, Standardowy, Odczyt).
 
-5. 1. Kliknij **„Wyślij zaproszenie”**.
+5. Kliknij **„Wyślij zaproszenie”**.
 
-6. 1. Nowy użytkownik otrzyma e-mail i zaakceptuje zaproszenie.
+6. Nowy użytkownik otrzyma e-mail i zaakceptuje zaproszenie.
 
 Dzięki tym instrukcjom możesz szybko i łatwo dodać użytkownika do Google Ads lub udostępnić konto agencji marketingowej. 🚀
 
@@ -94,11 +94,11 @@ Podawanie adresu e-mail osoby, której nadajemy uprawnienia
 
 Google Ads pozwala na nadanie różnych poziomów dostępu:
 
-- - **Administrator** – pełne uprawnienia do zarządzania kampaniami, użytkownikami i ustawieniami konta.
+- **Administrator** – pełne uprawnienia do zarządzania kampaniami, użytkownikami i ustawieniami konta.
 
-- - **Standardowy** – dostęp do zarządzania kampaniami, ale bez możliwości zmiany ustawień użytkowników.
+- **Standardowy** – dostęp do zarządzania kampaniami, ale bez możliwości zmiany ustawień użytkowników.
 
-- - **Odczyt** – użytkownik może jedynie przeglądać kampanie, ale nie może wprowadzać zmian.
+- **Odczyt** – użytkownik może jedynie przeglądać kampanie, ale nie może wprowadzać zmian.
 
 Wybierz odpowiedni poziom uprawnień, w zależności od roli nowego użytkownika.
 
