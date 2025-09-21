@@ -4,6 +4,7 @@ description: Dzięki tym instrukcjom możesz szybko i łatwo dodać użytkownika
 date: 2025-09-21
 tags:
   - poradnik
+  - google-ads
 author: Kacper Baran
 heading: Google Ads - jak nadać dostęp agencji lub użytkownikowi krok po kroku
 teaser: Google Ads to platforma reklamowa Google, pozwalająca firmom i agencjom na zarządzanie kampaniami reklamowymi. W zależności od potrzeb możesz dodać użytkownika do konta Google Ads lub udostępnić identyfikator konta agencji menedżerskiej.
