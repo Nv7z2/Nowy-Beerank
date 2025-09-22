@@ -30,6 +30,8 @@
         © 2025 BEERANK All rights reserved.<br />
         By WebsiteStyle
       </span>
+      <br>
+      <NuxtLink to="/polityka-prywatnosci" class="footer__privacy-policy-link">Polityka Prywatności</NuxtLink>
     </div>
 
     <div class="footer__image-wrapper">
@@ -129,6 +131,12 @@
     width: 100%;
     filter: invert(1);
     transform: translateY(50%);
+  }
+
+  &__privacy-policy-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #fff;
   }
 }
 </style>
