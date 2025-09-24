@@ -30,11 +30,11 @@ function closeMobileMenu() {
     <nav class="header__nav">
       <ul class="header__nav-list" ref="navigation">
         <li><NuxtLink to="/oferta" class="header__link" prefetch>Oferta</NuxtLink></li>
-        <li>
+        <!-- <li>
           <NuxtLink to="/case-studies" class="header__link">
             Jak to robimy
           </NuxtLink>
-        </li>
+        </li> -->
         <li>
           <NuxtLink to="/blog" class="header__link" prefetch>Baza wiedzy</NuxtLink>
         </li>
