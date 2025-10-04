@@ -4,8 +4,8 @@ import { defineOrganization } from "nuxt-schema-org/schema";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     ssr: true,
-    nitro: {
-        preset: "netlify",
+    router: {
+        base: "/",
     },
     target: "static",
     telemetry: false,
@@ -27,8 +27,8 @@ export default defineNuxtConfig({
         "@icons": resolve(__dirname, "assets/icons"),
     },
     image: {
-        domains: ["nowy-beerank.netlify.app", "cdn.beerank.pl"],
-        provider: "ipx",
+        quality: 80,
+        format: ['avif', 'webp']
     },
     features: {
         inlineStyles: false,

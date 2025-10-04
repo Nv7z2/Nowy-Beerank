@@ -3,6 +3,7 @@ import Breadcrumbs from "~/components/global/Breadcrumbs.vue";
 import DividerWithTitle from "~/components/global/DividerWithTitle.vue";
 import RecentBlogPosts from "~/components/global/RecentBlogPosts.vue";
 import { h } from "vue";
+import { NuxtImg } from "#components";
 
 const NETLIFY_IMG_BASE = "";
 
@@ -14,32 +15,28 @@ const { data: page } = await useAsyncData(route.path, () =>
 );
 
 const components = {
-    img(props) {
-        const src = props.src.startsWith("/") ? props.src : "/" + props.src;
-        const widths = [320, 480, 768, 1024, 1280, 1440];
+  img(props: Record<string, any>) {
+    let src = props.src ?? "";
+    // Jeśli src nie zaczyna się od slash, dodaj go:
+    if (!src.startsWith("/")) {
+      src = "/" + src;
+    }
 
-        const srcset = widths
-            .map(
-                (w) =>
-                    `${NETLIFY_IMG_BASE}/.netlify/images?url=${encodeURIComponent(src)}&w=${w} ${w}w`
-            )
-            .join(", ");
+    // Tutaj możesz dopasować automatycznie prefix '/img' jeśli potrzebujesz
+    // ale zakładam, że src podajesz poprawne (np. "/img/blog/...")
 
-        const alt = props.alt || "";
-        const sizes = "(max-width: 768px) 100vw, 1280px";
-
-        return h("img", {
-            ...props,
-            alt,
-            title: alt,
-            loading: "lazy",
-            decoding: "async",
-            fetchpriority: "low",
-            src: `${NETLIFY_IMG_BASE}/.netlify/images?url=${encodeURIComponent(src)}&w=1280`,
-            srcset,
-            sizes,
-        });
-    },
+    // Przekazujemy propsy do NuxtImg, przeczą te atrybuty lub nadpiszę jeśli chcesz:
+    return h(NuxtImg, {
+      ...props,
+      src,
+      alt: props.alt || "",
+      loading: "lazy",
+      decoding: "async",
+      fetchpriority: "low",
+      // Możesz dodać format="avif" jeśli chcesz wymusić format lub fallback
+      // format: "avif",
+    });
+  },
 };
 
 const metaTitle = computed(() => page?.value?.seo.title);
@@ -374,6 +371,10 @@ useSeoMeta({
             display: block;
             margin: 0 auto 3rem;
         }
+    }
+
+    code span {
+        white-space: break-spaces;
     }
 }
 </style>
