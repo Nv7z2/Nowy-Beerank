@@ -34,4 +34,5 @@ jobs:
           port: 21
           local-dir: .output/public/
           server-dir: ${{ secrets.FTP_PATH }}
+          parallel: 1
           git-ftp-args: --insecure
