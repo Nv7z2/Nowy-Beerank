@@ -32,6 +32,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
-          local-dir: .output/public
+          local-dir: .output/public/
           server-dir: ${{ secrets.FTP_PATH }}
           git-ftp-args: --insecure
