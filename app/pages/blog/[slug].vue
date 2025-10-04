@@ -15,28 +15,28 @@ const { data: page } = await useAsyncData(route.path, () =>
 );
 
 const components = {
-  img(props: Record<string, any>) {
-    let src = props.src ?? "";
-    // Jeśli src nie zaczyna się od slash, dodaj go:
-    if (!src.startsWith("/")) {
-      src = "/" + src;
-    }
+    img(props: Record<string, any>) {
+        let src = props.src ?? "";
+        // Jeśli src nie zaczyna się od slash, dodaj go:
+        if (!src.startsWith("/")) {
+            src = "/" + src;
+        }
 
-    // Tutaj możesz dopasować automatycznie prefix '/img' jeśli potrzebujesz
-    // ale zakładam, że src podajesz poprawne (np. "/img/blog/...")
+        // Tutaj możesz dopasować automatycznie prefix '/img' jeśli potrzebujesz
+        // ale zakładam, że src podajesz poprawne (np. "/img/blog/...")
 
-    // Przekazujemy propsy do NuxtImg, przeczą te atrybuty lub nadpiszę jeśli chcesz:
-    return h(NuxtImg, {
-      ...props,
-      src,
-      alt: props.alt || "",
-      loading: "lazy",
-      decoding: "async",
-      fetchpriority: "low",
-      // Możesz dodać format="avif" jeśli chcesz wymusić format lub fallback
-      // format: "avif",
-    });
-  },
+        // Przekazujemy propsy do NuxtImg, przeczą te atrybuty lub nadpiszę jeśli chcesz:
+        return h(NuxtImg, {
+            ...props,
+            src,
+            alt: props.alt || "",
+            loading: "lazy",
+            decoding: "async",
+            fetchpriority: "low",
+            // Możesz dodać format="avif" jeśli chcesz wymusić format lub fallback
+            // format: "avif",
+        });
+    },
 };
 
 const metaTitle = computed(() => page?.value?.seo.title);
