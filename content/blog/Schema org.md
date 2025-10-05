@@ -8,7 +8,7 @@ tags:
 author: Kacper Baran
 heading: Schema.org - po co Ci dane uporządkowane
 teaser: |-
-  Schema.org (dane uporządkowane) to standard opisu strony internetowej w sposób zrozumiałym dla wyszukiwarek. Dzięki tego Google jednoznacznie wie, czy pokazujesz produkt, usługę czy firmę (bez konieczności "czytania" strony) i może wyświetlić rich results (cena, dostępność, okruszki), co zwykle podnosi CTR i zaufanie.
+  Schema.org (dane uporządkowane) to opisywanie strony internetowej w sposób zrozumiałym dla wyszukiwarek. Dzięki temu Google jednoznacznie wie, czy pokazujesz produkt, usługę czy firmę i może wyświetlić "rich results" (cena, dostępność, menu okruszkowe) na liście wyników wyszukiwania.
   Dane uporządkowane nie gwarantują wyższej pozycji, ale realnie poprawa widoczność Twojej strony w wynikach wyszukiwania.
 ---
 ## Czym są dane uporządkowane i gdzie się znajdują
