@@ -173,79 +173,35 @@ Drugą pułapką są duplikaty. Gdy motyw, wtyczka i ręczny kod jednocześnie d
 
 Częsty kłopot to tzw. self‑serving reviews, czyli gwiazdki wystawione sobie jako marce bez realnych opinii na stronie. Google tego nie wyświetli - trzymaj recenzje tam, gdzie są naprawdę i gdzie użytkownik je widzi.
 
-## Checklista wdrożenia
-
-Poniżej masz krótką checklistę, która przeprowadzi Cię od planu do monitoringu efektów schema.org - w sam raz do odhaczenia przy realnym wdrożeniu.
-
-- Plan i zakres:
-    
-    - Wybierz typy per szablon (produkt, kategoria, usługa, lokalizacja, blog, strona główna).
-    - Wyłącz duplikaty schematów w motywie/innych wtyczkach (zostaw jedno źródło).
-- Wdrożenie (WordPress/Rank Math):
-    
-    - Włącz moduły: Schema, WooCommerce (sklep), Local SEO (usługi/lokalne).
-    - Ustaw szablony: Post=Article, Page=WebPage/Article, Product=Product, Lokalizacja=LocalBusiness.
-    - Zmapuj dane: brand, SKU, GTIN/MPN, price, priceCurrency, availability; NAP, openingHours, geo.
-- Jakość i graf:
-    
-    - Dane w schema = dane na stronie (cena, dostępność, recenzje).
-    - Użyj stałych @id (/#organization, /#website, /#webpage) i mainEntity/mainEntityOfPage.
-    - Dodaj BreadcrumbList i ItemList na listingach.
-- Testy (przed i po publikacji):
-    
-    - Rich Results Test (Live URL), Schema Markup Validator.
-    - GSC: Inspekcja adresu → „Testuj na żywo” (czy widać JSON‑LD).
-    - Crawl próbkowy: Screaming Frog/Sitebulb (braki/duplikaty).
-- Monitoring i KPI:
-    
-    - GSC → Ulepszenia + Search appearance (liczba stron „prawidłowych”, błędy, CTR).
-    - GA4: segment landing pages z wdrożeniem, konwersje/przychód.
-    - Zapisz adnotację wdrożenia, porównuj okresy i grupy (Test vs Kontrola).
-- Utrzymanie:
-    
-    - Retesty po deployu/aktualizacjach wtyczek; priceValidUntil i godziny świąteczne.
-    - Właściciel procesu + plan rollbacku.
-
 
 ## FAQ - najczęstsze pytania i szybkie odpowiedzi
 
-Poniżej znajdziesz krótkie, praktyczne odpowiedzi na pytania, które najczęściej pojawiają się przy wdrażaniu schema.org. To skrót „co i jak”, bez żargonu, z jasnymi wskazówkami.
+Poniżej znajdziesz krótkie, praktyczne odpowiedzi na pytania, które najczęściej pojawiają się przy wdrażaniu schema.org.
 
-Czy schema poprawia pozycje?  
+### Czy schema poprawia pozycje?  
+
 Bezpośrednio nie. Schema zwiększa szansę na bogatszy wygląd wyników i lepsze zrozumienie treści, co zwykle podnosi CTR. Pośrednio może pomóc w widoczności dzięki lepszemu dopasowaniu zapytań.
 
-Kiedy widać efekty?  
+### Kiedy widać efekty?  
+
 Najczęściej 3-14 dni po ponownej indeksacji stron; pełniejszy obraz po 4-8 tygodniach. Zawsze rób adnotację wdrożenia i porównuj okresy.
 
-Które strony wdrażać najpierw?  
-Karty produktów w e‑commerce oraz strony lokalizacji/kontaktu w usługach. Potem kategorie/listingi i strona główna, następnie blog i typy specjalne (eventy, oferty pracy, wideo).
+### Czy wystarczy wtyczka (np. Rank Math)?  
 
-Czy wystarczy wtyczka (np. Rank Math)?  
 Tak, jeśli jest poprawnie skonfigurowana i jest JEDYNYM źródłem markupu. Wyłącz duplikaty w motywie/innych wtyczkach, zmapuj pola (cena, dostępność, identyfikatory).
 
-JSON‑LD, Microdata czy RDFa?  
+### JSON‑LD, Microdata czy RDFa?  
+
 JSON‑LD. Jest prostszy w utrzymaniu i rekomendowany przez Google. Unikaj mieszania formatów dla tego samego bytu.
 
-Czy FAQ/HowTo warto?  
+### Czy FAQ/HowTo warto?  
+
 FAQ ma ograniczoną widoczność w Google i nie zawsze pojawia się w wynikach; używaj tylko, jeśli realnie pomaga użytkownikowi. HowTo obecnie nie jest wyświetlane w rich results w Google.
 
-Czy mogę dodać gwiazdki dla firmy?  
+### Czy mogę dodać gwiazdki dla firmy?  
+
 Nie. Google nie pokazuje tzw. self‑serving reviews dla Organization/LocalBusiness. Gwiazdki tylko tam, gdzie są realne, widoczne recenzje (np. na produkcie).
 
-Co jeśli ceny i stany zmieniają się często?  
-Powiąż schema bezpośrednio z danymi sklepu (cena, availability), aktualizuj priceValidUntil przy promocjach. W SPA/headless preferuj SSR/SSG/ISR, by Google widział aktualny JSON‑LD.
+### Czy trzeba dodawać schema do każdej strony?  
 
-Czy schema zastępuje feedy (np. Merchant Center)?  
-Nie. To rozwiązania komplementarne. Utrzymuj spójność danych między stroną, schematem i feedem.
-
-Jak testować i monitorować?  
-Test na żywo w Rich Results Test, walidacja w validator.schema.org, Inspekcja adresu w GSC (wyrenderowany HTML), raporty Ulepszeń w GSC i okresowy crawl (Screaming Frog/Sitebulb). Przy większych serwisach dodaj testy w CI.
-
-Czy za błędny schema grożą kary?  
-Za zwykłe błędy - nie, Google je zignoruje lub zgłosi. Za nadużycia (wprowadzanie w błąd, sztuczne recenzje) możliwe są działania ręczne.
-
-Czy trzeba dodawać schema do każdej strony?  
 Nie. Priorytetyzuj strony wpływające na CTR i konwersje. Polityki, loginy itp. wystarczą jako WebPage.
-
-Jak to działa w serwisach wielojęzycznych?  
-Każda wersja językowa ma własny WebPage i markup w danym języku; stosuj hreflang między wersjami i konsekwentne @id w obrębie danej wersji.****
