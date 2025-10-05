@@ -18,7 +18,6 @@ export default defineNuxtConfig({
         "@nuxt/scripts",
         "@nuxt/image",
         "nuxt-schema-org",
-        "@nuxtjs/gtm",
     ],
     alias: {
         // Alias do folderu komponentów w app/
@@ -26,11 +25,6 @@ export default defineNuxtConfig({
         "@styles": resolve(__dirname, "assets/styles"),
         "@images": resolve(__dirname, "assets/images"),
         "@icons": resolve(__dirname, "assets/icons"),
-    },
-    gtm: {
-        id: "GTM-T6TKB3P9",
-        enabled: true,
-        debug: false,
     },
     image: {
         quality: 80,
