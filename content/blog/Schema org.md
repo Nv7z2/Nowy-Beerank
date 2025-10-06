@@ -1,6 +1,6 @@
 ---
-title: Schema.org - po co Ci dane uporządkowane
-description: Schema.org - po co Ci dane uporządkowane
+title: Schema.org - po co Ci dane uporządkowane na stronie | Beerank
+description: "Sprawdź czym są dane uporządkowane (schema.org), jak mogą pomóc Twojej stronie internetowej i co bez nich tracisz."
 date:
 tags:
   - poradnik
