@@ -33,7 +33,10 @@ const staticToc = [
           <slot name="description" mdc-unwrap="p"></slot>
         </p>
 
-        <contact-button />
+        <div class="service-hero__buttons">
+          <contact-button />
+          <contact-button type="tel" />
+        </div>
       </div>
 
       <div class="service-hero__empty-space"></div>
@@ -98,8 +101,8 @@ const staticToc = [
     font-weight: 500;
 
     @include on-mobile {
-      margin: 0 0 2.5rem;
-      font-size: $font-xxlarge-mobile;
+      margin: 0 0 1.5rem;
+      font-size: $font-xlarge-mobile;
     }
   }
 
@@ -113,6 +116,13 @@ const staticToc = [
       max-width: 100%;
       font-size: $font-base-mobile;
     }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: start;
   }
 
   &__toc {
