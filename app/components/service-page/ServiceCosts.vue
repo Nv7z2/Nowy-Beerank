@@ -46,7 +46,7 @@ const props = defineProps({
         >
         lub
         <a
-          href="https://calendar.app.google/DwYLu7JAuHCp6rTX6"
+          href="https://calendar.app.google/eCW4PEKbWmWvqfUE6"
           target="_blank"
           title="Otwórz kalendarz Google z dostępnymi terminami spotkania"
           >umów bezpłatne spotkanie</a
