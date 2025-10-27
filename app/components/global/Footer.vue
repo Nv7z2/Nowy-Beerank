@@ -32,6 +32,8 @@
       </span>
       <br>
       <NuxtLink to="/polityka-prywatnosci" class="footer__privacy-policy-link">Polityka Prywatności</NuxtLink>
+      <br>
+      <NuxtLink to="/oferta/seo/gdansk" class="footer__privacy-policy-link">Pozycjonowanie Gdańsk</NuxtLink>
     </div>
 
     <div class="footer__image-wrapper">
