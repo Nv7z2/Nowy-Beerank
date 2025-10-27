@@ -4,6 +4,11 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  type: {
+    type: String,
+    default: 'contact',
+    validator: val => ['contact', 'tel'].includes(val)
+  }
 });
 </script>
 
@@ -13,10 +18,21 @@ const props = defineProps({
     class="contact-button"
     :class="{ 'contact-button--white': isWhite }"
     prefetch
+    v-if="type == 'contact'"
   >
     Konsultacja z ekspertem
     <img src="@images/icons/arrow-right-black.svg" role="presentation" alt="" />
   </NuxtLink>
+
+  <a
+    href="tel:+48790556756"
+    class="contact-button"
+    :class="{ 'contact-button--white': isWhite }"
+    prefetch
+    v-if="type == 'tel'"
+  >
+    Zadzwoń: 790 556 756 
+  </a>
 </template>
 
 <style scoped lang="scss">
