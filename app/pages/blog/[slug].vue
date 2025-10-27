@@ -5,8 +5,6 @@ import RecentBlogPosts from "~/components/global/RecentBlogPosts.vue";
 import { h } from "vue";
 import { NuxtImg } from "#components";
 
-const NETLIFY_IMG_BASE = "";
-
 const route = useRoute();
 const { data: page } = await useAsyncData(route.path, () =>
     queryCollection("blog")
@@ -17,15 +15,10 @@ const { data: page } = await useAsyncData(route.path, () =>
 const components = {
     img(props: Record<string, any>) {
         let src = props.src ?? "";
-        // Jeśli src nie zaczyna się od slash, dodaj go:
         if (!src.startsWith("/")) {
             src = "/" + src;
         }
 
-        // Tutaj możesz dopasować automatycznie prefix '/img' jeśli potrzebujesz
-        // ale zakładam, że src podajesz poprawne (np. "/img/blog/...")
-
-        // Przekazujemy propsy do NuxtImg, przeczą te atrybuty lub nadpiszę jeśli chcesz:
         return h(NuxtImg, {
             ...props,
             src,
