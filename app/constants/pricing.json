@@ -1,16 +1,16 @@
 {
     "seo": [
         {
-            "name": "Mapowanie serwisu",
-            "price": 500
+            "name": "Konsultacja",
+            "price": 219
         },
         {
-            "name": "Wdrożenie poprawek przed migracją",
-            "price": 1000
+            "name": "SEO lokalne",
+            "price": 1500
         },
         {
-            "name": "Migracja",
-            "price": 2000
+            "name": "SEO wielkoformatowe",
+            "price": "3000+"
         }
     ],
     "analityka": [
