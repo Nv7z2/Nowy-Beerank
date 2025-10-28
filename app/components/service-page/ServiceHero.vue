@@ -96,7 +96,7 @@ const staticToc = [
   }
 
   &__additional-heading {
-    font-size: $font-xxlarge;
+    font-size: $font-xlarge;
     margin: 0 0 3.5rem;
     font-weight: 500;
 

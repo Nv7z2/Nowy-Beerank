@@ -1,6 +1,6 @@
 ---
-title: Pozycjonowanie Gdańsk
-description: Pomożemy Ci wdrożyć i interpretować ruch na stronie internetowej Twojej firmy. Wdrożymy narzędzia Google, Meta i Microsoft Clarity.
+title: Pozycjonowanie Gdańsk | Zarabiaj więcej z Beerank
+description: "Chcesz więcej klientów z Gdańska? Pomożemy Twojej stronie znaleźć się na pierwszych* miejscach w Google. Zwiększ ruch i sprzedawaj więcej online."
 date: 2025/09/08
 schemaType: Service
 ---
