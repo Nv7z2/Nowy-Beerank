@@ -4,9 +4,16 @@ import Footer from '~/components/global/Footer.vue';
 </script>
 
 <template>
-    <Header />
-    <slot />
-    <Footer />
+    <div class="main-layout">
+        <Header />
+        <slot />
+        <Footer />
+    </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.main-layout {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+</style>
