@@ -29,6 +29,7 @@ function closeMobileMenu() {
     </div>
     <nav class="header__nav">
       <ul class="header__nav-list" ref="navigation">
+        <li><a href="https://marketing.beerank.pl/" target="_blank" class="header__link" prefetch>System Nektar</a></li>
         <li><NuxtLink to="/oferta" class="header__link" prefetch>Oferta</NuxtLink></li>
         <!-- <li>
           <NuxtLink to="/case-studies" class="header__link">
