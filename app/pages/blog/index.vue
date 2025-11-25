@@ -6,13 +6,15 @@ const { data: page } = await useAsyncData(route.path, () => {
 </script>
 
 <template>
-    <DividerWithTitle>Baza wiedzy</DividerWithTitle>
-    <Breadcrumbs>Blog</Breadcrumbs>
-    <section class="blog">
-        <div class="blog-box" v-for="post in page" :key="post.id">
-            <blog-post-block :post="post" />
-        </div>
-    </section>
+    <div>
+        <DividerWithTitle>Baza wiedzy</DividerWithTitle>
+        <Breadcrumbs>Blog</Breadcrumbs>
+        <section class="blog">
+            <div class="blog-box" v-for="post in page" :key="post.id">
+                <blog-post-block :post="post" />
+            </div>
+        </section>
+    </div>
 </template>
 
 <style scoped lang="scss">
