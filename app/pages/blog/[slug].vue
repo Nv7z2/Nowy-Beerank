@@ -6,9 +6,9 @@ import { h } from "vue";
 import { NuxtImg } from "#components";
 
 const route = useRoute();
-const { data: page } = await useAsyncData(route.path, () =>
+const { data: page } = await useAsyncData(`blog-${route.params.slug}`, () =>
     queryCollection("blog")
-        .path("/blog/" + route.params.slug)
+        .path(`/blog/${route.params.slug}`)
         .first()
 );
 
@@ -26,8 +26,6 @@ const components = {
             loading: "lazy",
             decoding: "async",
             fetchpriority: "low",
-            // Możesz dodać format="avif" jeśli chcesz wymusić format lub fallback
-            // format: "avif",
         });
     },
 };
@@ -60,12 +58,13 @@ useSeoMeta({
             <h1 class="blog-post__h1">{{ page?.meta.heading }}</h1>
             <div class="blog-post__tags">
                 <span class="blog-post__tag" v-for="tag in page?.meta.tags">
-                    {{ tag.replaceAll("-", " ") }}
+                    {{ tag?.replaceAll("-", " ") }}
                 </span>
             </div>
             <p
                 class="blog-post__teaser"
-                v-html="page?.meta?.teaser.replace('\n', '<br /><br />')"
+                v-if="page?.meta?.teaser"
+                v-html="page.meta.teaser.replaceAll('\n', '<br /><br />')"
             ></p>
         </div>
 
