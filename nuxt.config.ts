@@ -26,6 +26,13 @@ export default defineNuxtConfig({
         "@images": resolve(__dirname, "assets/images"),
         "@icons": resolve(__dirname, "assets/icons"),
     },
+    scripts: {
+        registry: {
+            googleTagManager: {
+                id: "GTM-T6TKB3P9",
+            },
+        },
+    },
     image: {
         quality: 80,
         format: ["avif", "webp"],
