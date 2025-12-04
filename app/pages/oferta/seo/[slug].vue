@@ -1,14 +1,11 @@
 <script setup lang="ts">
 const route = useRoute();
 const { data: page } = await useAsyncData(
-    route.path,
+    `oferta-seo-${route.params.slug}`,
     () =>
         queryCollection("pages")
             .path("/pages/oferta/seo/" + route.params.slug)
-            .first(),
-    {
-        initialCache: false,
-    }
+            .first()
 );
 
 const metaTitle = computed(() => page?.value?.seo.title);

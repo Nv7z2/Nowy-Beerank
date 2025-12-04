@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
-const { data: page } = await useAsyncData(route.path, () =>
+const { data: page } = await useAsyncData(`oferta-seo-${route.params.slug}`, () =>
   queryCollection("pages").path('/pages/oferta/seo').first() // Adjust the path to match your content structure
 );
 
