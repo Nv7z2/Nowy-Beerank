@@ -86,7 +86,7 @@ const fullscreenCtaData = {
 
         <LazyHomeServicesBlocks hydrate-on-visible />
 
-        <LazyHomeSteps>
+        <LazyHomeSteps hydrate-on-visible>
             <template v-slot:heading>
                 <strong>Realizujemy cele</strong> 3 proste kroki by cieszyć się rosnącym napływem 🐝
                 miodu dla Twojego binzesu.
@@ -97,12 +97,13 @@ const fullscreenCtaData = {
             heading="Zapylamy Twoją widoczność"
             description="Beerank to grupa zapaleńców SEO, którzy lubią to, co robią i robimy to psz—świetnie."
             :social-links="fullscreenCtaData.links"
+            hydrate-on-visible
         />
 
-        <LazyDividerWithTitle> Sprawdź naszą bazę wiedzy </LazyDividerWithTitle>
+        <LazyDividerWithTitle hydrate-on-visible> Sprawdź naszą bazę wiedzy </LazyDividerWithTitle>
 
-        <LazyRecentBlogPosts />
+        <LazyRecentBlogPosts hydrate-on-visible />
 
-        <LazyContactForm />
+        <LazyContactForm hydrate-on-visible />
     </main>
 </template>
