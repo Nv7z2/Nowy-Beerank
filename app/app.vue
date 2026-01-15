@@ -2,8 +2,13 @@
 onMounted(() => {
     if (!import.meta.env.PROD) return;
 
-    const { proxy } = useScriptGoogleTagManager({
-        id: 'GTM-T6TKB3P9',
+    // Disabled Google Tag Manager load
+    // const { proxy } = useScriptGoogleTagManager({
+    //     id: 'GTM-T6TKB3P9',
+    // });
+
+    const { proxy: clarity } = useScriptClarity({
+        id: 'uc6k0l06ja',
     });
 });
 </script>

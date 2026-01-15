@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
+    "build-analyze": "nuxt build --analyze",
     "dev": "nuxt dev",
     "devhost": "nuxt dev",
     "generate": "nuxt generate",
@@ -15,6 +16,7 @@
     "@nuxt/fonts": "^0.11.4",
     "@nuxt/image": "^1.11.0",
     "@nuxt/scripts": "^0.11.10",
+    "@nuxtjs/critters": "^0.9.0",
     "@nuxtjs/sitemap": "^7.4.3",
     "@unhead/vue": "^2.0.14",
     "better-sqlite3": "^12.2.0",

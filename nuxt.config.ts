@@ -10,10 +10,10 @@ export default defineNuxtConfig({
     modules: [
         '@nuxtjs/sitemap',
         '@nuxt/content',
-        '@nuxt/fonts',
         '@nuxt/scripts',
         '@nuxt/image',
         'nuxt-schema-org',
+        '@nuxtjs/critters',
     ],
     alias: {
         // Alias do folderu komponentów w app/
@@ -21,13 +21,6 @@ export default defineNuxtConfig({
         '@styles': resolve(__dirname, 'assets/styles'),
         '@images': resolve(__dirname, 'assets/images'),
         '@icons': resolve(__dirname, 'assets/icons'),
-    },
-    scripts: {
-        registry: {
-            googleTagManager: {
-                id: 'GTM-T6TKB3P9',
-            },
-        },
     },
     image: {
         quality: 80,
@@ -45,17 +38,6 @@ export default defineNuxtConfig({
             link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }],
         },
         pageTransition: { name: 'page', mode: 'out-in' },
-    },
-    fonts: {
-        families: [
-            {
-                name: 'Inter',
-                provider: 'google',
-                weights: [400, 700],
-                subsets: ['latin-ext'],
-                styles: ['normal'],
-            },
-        ],
     },
     site: {
         trailingSlash: false,
@@ -98,6 +80,7 @@ export default defineNuxtConfig({
         experimental: { nativeSqlite: true },
     },
     nitro: {
+        preset: 'static',
         prerender: {
             routes: ['/'],
             crawlLinks: true,
@@ -106,5 +89,35 @@ export default defineNuxtConfig({
     routeRules: {
         '/': { prerender: true },
         '/blog/**': { prerender: true },
+        '/_nuxt/**': {
+            headers: {
+                'Cache-Control': 'public, max-age=31536000, immutable',
+            },
+        },
+        '/_fonts/**': {
+            headers: {
+                'Cache-Control': 'public, max-age=31536000, immutable',
+            },
+        },
+        '/icons/**': {
+            headers: {
+                'Cache-Control': 'public, max-age=31536000, immutable',
+            },
+        },
+        '/**/*.avif': {
+            headers: {
+                'Cache-Control': 'public, max-age=31536000, immutable',
+            },
+        },
+        '/**': {
+            headers: {
+                'Cache-Control': 'public, max-age=0, must-revalidate',
+            },
+        },
+    },
+    critters: {
+        config: {
+            preload: 'swap',
+        },
     },
 });
