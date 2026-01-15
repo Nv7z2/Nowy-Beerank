@@ -56,6 +56,8 @@ import { NuxtImg } from '#components';
                     alt="Beerank miniaturka pszczoła"
                     loading="eager"
                     fetchpriority="high"
+                    width="364"
+                    height="272"
                 />
                 <div class="home-hero__social-links">
                     <ul>
