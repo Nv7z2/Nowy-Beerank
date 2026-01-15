@@ -1,30 +1,32 @@
 <script setup>
 const props = defineProps({
-  isHeadingH1: {
-    type: Boolean,
-    required: false,
-    default: false
-  },
+    isHeadingH1: {
+        type: Boolean,
+        required: false,
+        default: false,
+    },
 });
 </script>
 
 <template>
-<section class="home-services">
-    <div class="home-services__top">
-        <h2 class="home-services__heading" v-if="!isHeadingH1">
-            <slot name="heading" mdc-unwrap="p"></slot>
-        </h2>
-        <h1 class="home-services__heading" v-else>
-            <slot name="heading" mdc-unwrap="p"></slot>
-        </h1>
-        <slot name="description"></slot>
-    </div>
-</section>
+    <section class="home-services">
+        <div class="home-services__top">
+            <h2 class="home-services__heading" v-if="!isHeadingH1">
+                <slot name="heading" mdc-unwrap="p"></slot>
+            </h2>
+            <h1 class="home-services__heading" v-else>
+                <slot name="heading" mdc-unwrap="p"></slot>
+            </h1>
+            <p>
+                <slot name="description"></slot>
+            </p>
+        </div>
+    </section>
 </template>
 
 <style lang="scss">
-@use "@styles/variables" as *;
-@use "@styles/mixins" as *;
+@use '@styles/variables' as *;
+@use '@styles/mixins' as *;
 
 .home-services {
     padding: 1.75rem $desktop-section-padding 6.25rem;
@@ -50,7 +52,7 @@ const props = defineProps({
             flex: 1;
             max-width: 48rem;
             line-height: 1.2;
-            letter-spacing: -.5px;
+            letter-spacing: -0.5px;
 
             @include on-mobile {
                 font-size: $font-base-mobile;
