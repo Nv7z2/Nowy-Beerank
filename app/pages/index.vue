@@ -1,4 +1,15 @@
 <script setup lang="ts">
+useHead({
+    link: [
+        {
+            rel: 'preload',
+            as: 'image',
+            href: '/_ipx/q_60/img/home/miniaturka_hero_beerank.avif',
+            fetchpriority: 'high',
+        },
+    ],
+});
+
 useSeoMeta({
     title: 'Beerank - Pozycjonowanie SEO i Marketing w internecie',
     ogTitle: 'Beerank - Pozycjonowanie SEO i Marketing w internecie',

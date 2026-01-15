@@ -23,7 +23,7 @@ export default defineNuxtConfig({
         '@icons': resolve(__dirname, 'assets/icons'),
     },
     image: {
-        quality: 80,
+        quality: 60,
         format: ['avif', 'webp'],
     },
     features: {
