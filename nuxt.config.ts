@@ -4,10 +4,6 @@ import { defineOrganization } from 'nuxt-schema-org/schema';
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     ssr: true,
-    router: {
-        base: '/',
-    },
-    target: 'static',
     telemetry: false,
     compatibilityDate: '2025-07-15',
     devtools: { enabled: true },
@@ -42,7 +38,6 @@ export default defineNuxtConfig({
     },
     css: ['@styles/main.scss'],
     app: {
-        hydrate: true,
         head: {
             htmlAttrs: {
                 lang: 'pl',
@@ -52,7 +47,15 @@ export default defineNuxtConfig({
         pageTransition: { name: 'page', mode: 'out-in' },
     },
     fonts: {
-        families: [{ name: 'Inter', provider: 'google' }],
+        families: [
+            {
+                name: 'Inter',
+                provider: 'google',
+                weights: [400, 700],
+                subsets: ['latin-ext'],
+                styles: ['normal'],
+            },
+        ],
     },
     site: {
         trailingSlash: false,
@@ -99,5 +102,9 @@ export default defineNuxtConfig({
             routes: ['/'],
             crawlLinks: true,
         },
+    },
+    routeRules: {
+        '/': { prerender: true },
+        '/blog/**': { prerender: true },
     },
 });
